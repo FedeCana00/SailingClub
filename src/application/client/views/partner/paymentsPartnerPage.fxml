@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="93.0" layoutY="24.0" prefHeight="48.0" prefWidth="177.0" style="-fx-background-color: #C3F4FF; -fx-background-radius: 50 20 50 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" text="      Payments" AnchorPane.leftAnchor="93.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font name="Verdana Bold" size="13.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="payment" fitHeight="41.0" fitWidth="48.0" layoutX="204.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="204.0" AnchorPane.topAnchor="17.0">
+         <image>
+            <Image url="@../../../../img/race.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="toPay" layoutY="80.0" prefHeight="90.0" prefWidth="604.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <ImageView fx:id="back" fitHeight="48.0" fitWidth="55.0" layoutX="24.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="24.0" AnchorPane.topAnchor="14.0" />
+      <Label alignment="CENTER" layoutX="264.0" layoutY="54.0" prefHeight="26.0" prefWidth="72.0" text="To pay" AnchorPane.leftAnchor="264.0" AnchorPane.rightAnchor="264.0" AnchorPane.topAnchor="54.0">
+         <font>
+            <Font name="Verdana Bold" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="membershipFee" layoutY="201.0" prefHeight="82.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="201.0">
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Label alignment="CENTER" layoutX="190.0" layoutY="174.0" prefHeight="26.0" prefWidth="221.0" text="Membership fee paid" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="189.0" AnchorPane.topAnchor="174.0">
+         <font>
+            <Font name="Verdana Bold" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="storageFee" layoutX="4.0" layoutY="312.0" prefHeight="82.0" prefWidth="600.0" AnchorPane.bottomAnchor="106.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Label alignment="CENTER" layoutX="188.0" layoutY="285.0" prefHeight="26.0" prefWidth="221.0" text="Storage fee paid" AnchorPane.bottomAnchor="189.0" AnchorPane.leftAnchor="188.0" AnchorPane.rightAnchor="191.0">
+         <font>
+            <Font name="Verdana Bold" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="subscriptionFee" layoutX="14.0" layoutY="352.0" prefHeight="82.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Label alignment="CENTER" layoutX="190.0" layoutY="394.0" prefHeight="26.0" prefWidth="221.0" text="Subscription fee paid" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="189.0">
+         <font>
+            <Font name="Verdana Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

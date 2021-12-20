@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17">
+   <children>
+      <Label layoutX="93.0" layoutY="24.0" prefHeight="62.0" prefWidth="202.0" style="-fx-background-color: #C3F4FF; -fx-background-radius: 50 20 50 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" text="      Partner info" AnchorPane.leftAnchor="83.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font name="Verdana Bold" size="13.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="back" fitHeight="48.0" fitWidth="55.0" layoutX="24.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="21.0" />
+      <ImageView fx:id="info" fitHeight="48.0" fitWidth="55.0" layoutX="212.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="212.0" AnchorPane.topAnchor="21.0">
+         <image>
+            <Image url="@../../../../../img/info.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="16.0" layoutY="134.0" prefHeight="23.0" prefWidth="116.0" text="Name:" textAlignment="CENTER" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="134.0">
+         <font>
+            <Font name="Verdana Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="name" layoutX="132.0" layoutY="134.0" prefHeight="23.0" prefWidth="162.0" text="name" textAlignment="CENTER" AnchorPane.leftAnchor="132.0" AnchorPane.topAnchor="134.0">
+         <font>
+            <Font name="Verdana" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="300.0" layoutY="134.0" prefHeight="23.0" prefWidth="116.0" text="Surname:" textAlignment="CENTER" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="134.0">
+         <font>
+            <Font name="Verdana Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="surname" layoutX="416.0" layoutY="134.0" prefHeight="23.0" prefWidth="168.0" text="surname" textAlignment="CENTER" AnchorPane.leftAnchor="416.0" AnchorPane.topAnchor="134.0">
+         <font>
+            <Font name="Verdana" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="322.0" layoutY="33.0" prefHeight="23.0" prefWidth="55.0" text="id:" textAlignment="CENTER" AnchorPane.leftAnchor="322.0" AnchorPane.topAnchor="33.0">
+         <font>
+            <Font name="Verdana Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="id" layoutX="377.0" layoutY="33.0" prefHeight="23.0" prefWidth="162.0" text="id" textAlignment="CENTER" AnchorPane.leftAnchor="377.0" AnchorPane.topAnchor="33.0">
+         <font>
+            <Font name="Verdana" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_RIGHT" layoutX="31.0" layoutY="201.0" prefHeight="23.0" prefWidth="116.0" text="Address:" textAlignment="CENTER" AnchorPane.leftAnchor="31.0" AnchorPane.topAnchor="201.0">
+         <font>
+            <Font name="Verdana Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="address" layoutX="197.0" layoutY="201.0" prefHeight="23.0" prefWidth="382.0" text="address" textAlignment="CENTER" AnchorPane.leftAnchor="197.0" AnchorPane.topAnchor="201.0">
+         <font>
+            <Font name="Verdana" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="28.0" layoutY="284.0" prefHeight="23.0" prefWidth="122.0" text="Fiscal code:" textAlignment="CENTER" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="284.0">
+         <font>
+            <Font name="Verdana Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="fiscalCode" layoutX="197.0" layoutY="284.0" prefHeight="23.0" prefWidth="202.0" text="fiscal code" textAlignment="CENTER" AnchorPane.leftAnchor="197.0" AnchorPane.topAnchor="284.0">
+         <font>
+            <Font name="Verdana" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="31.0" layoutY="361.0" prefHeight="23.0" prefWidth="116.0" text="Username:" textAlignment="CENTER" AnchorPane.leftAnchor="31.0" AnchorPane.topAnchor="361.0">
+         <font>
+            <Font name="Verdana Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="username" layoutX="199.0" layoutY="361.0" prefHeight="23.0" prefWidth="360.0" text="username" textAlignment="CENTER" AnchorPane.leftAnchor="199.0" AnchorPane.topAnchor="361.0">
+         <font>
+            <Font name="Verdana" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
