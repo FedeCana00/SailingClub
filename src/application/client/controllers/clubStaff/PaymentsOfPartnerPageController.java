@@ -1,0 +1,176 @@
+/**
+ * 
+ */
+package application.client.controllers.clubStaff;
+
+import java.io.File;
+
+import application.client.Client;
+import application.client.managers.ClientManager;
+import application.client.managers.UserManager;
+import application.client.managers.ViewManager;
+import application.models.Boat;
+import application.models.CreditCard;
+import application.models.MembershipFee;
+import application.models.Partner;
+import application.models.StorageFee;
+import application.models.SubscriptionFee;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
+import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+
+/**
+ * @author Federico Canali
+ *
+ */
+public class PaymentsOfPartnerPageController {
+	/**
+	 * Used to show the screen. 
+	 **/
+	public static void show(Partner partner) {
+		try {
+			// Load root layout from fxml file.
+			FXMLLoader loaderStart = new FXMLLoader();
+			loaderStart.setLocation(Client.class.getResource("views/clubStaff/paymentsOfPartnerPage.fxml"));
+			AnchorPane rootPane = (AnchorPane) loaderStart.load();
+	        
+	        // Show the scene containing the root layout.
+	        Scene scene = new Scene(rootPane);
+	        
+	        //Initialize components
+	        Label title = (Label) scene.lookup("#title");
+	        ImageView back = (ImageView) scene.lookup("#back");
+	        
+	        title.setText("Payments of " + partner.getCredentials().getUsername());
+	        
+	        back.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+
+	            @Override
+	            public void handle(MouseEvent event) {
+	                ViewManager.getInstance().showLayout(ViewManager.CLUB_STAFF_MAIN_PAGE);
+	            }
+	        });
+	        
+	        setImageToImageView(back);
+	        
+	        // table set up membership fee
+	        TableView<MembershipFee> tableViewMembershipFee = (TableView<MembershipFee>) scene.lookup("#membershipFee");
+	        
+	        TableColumn<MembershipFee, String> column_m0 = new TableColumn<>("id");
+	        column_m0.setCellValueFactory(c-> new SimpleStringProperty(String.valueOf(c.getValue().getId())));
+	        column_m0.setStyle("-fx-alignment: CENTER");
+	        
+	        TableColumn<MembershipFee, String> column_m1 = new TableColumn<>("payment date");
+	        column_m1.setCellValueFactory(c-> new SimpleStringProperty(c.getValue().getDate().toString()));
+	        column_m1.setStyle("-fx-alignment: CENTER");
+
+
+	        TableColumn<MembershipFee, String> column_m2 = new TableColumn<>("price");
+	        column_m2.setCellValueFactory(c-> new SimpleStringProperty(String.valueOf(c.getValue().getPrice()) + "€"));
+	        column_m2.setStyle("-fx-alignment: CENTER");
+	        
+	        TableColumn<MembershipFee, String> column_m3 = new TableColumn<>("payment method");
+	        column_m3.setCellValueFactory(c-> new SimpleStringProperty(c.getValue().getPaymentMethod() instanceof CreditCard ? "Credit card" : "Wire transfer"));
+	        column_m3.setStyle("-fx-alignment: CENTER");
+
+	        tableViewMembershipFee.getColumns().add(column_m0);
+	        tableViewMembershipFee.getColumns().add(column_m1);
+	        tableViewMembershipFee.getColumns().add(column_m2);
+	        tableViewMembershipFee.getColumns().add(column_m3);
+	        
+	        tableViewMembershipFee.setItems(FXCollections.observableList(ClientManager.getInstance()
+	        		.getMembershipFees(partner.getId())));
+	        
+	        // table set up storage fee
+	        TableView<StorageFee> tableViewStorageFee = (TableView<StorageFee>) scene.lookup("#storageFee");
+	        
+	        TableColumn<StorageFee, String> column_s0 = new TableColumn<>("id");
+	        column_s0.setCellValueFactory(c-> new SimpleStringProperty(String.valueOf(c.getValue().getId())));
+	        column_s0.setStyle("-fx-alignment: CENTER");
+	        
+	        TableColumn<StorageFee, String> column_s1 = new TableColumn<>("boat id");
+	        column_s1.setCellValueFactory(c-> new SimpleStringProperty(String.valueOf(c.getValue().getBoatId())));
+	        column_s1.setStyle("-fx-alignment: CENTER");
+	        
+	        TableColumn<StorageFee, String> column_s2 = new TableColumn<>("payment date");
+	        column_s2.setCellValueFactory(c-> new SimpleStringProperty(c.getValue().getDate().toString()));
+	        column_s2.setStyle("-fx-alignment: CENTER");
+
+
+	        TableColumn<StorageFee, String> column_s3 = new TableColumn<>("price");
+	        column_s3.setCellValueFactory(c-> new SimpleStringProperty(String.valueOf(c.getValue().getPrice()) + "€"));
+	        column_s3.setStyle("-fx-alignment: CENTER");
+	        
+	        TableColumn<StorageFee, String> column_s4 = new TableColumn<>("payment method");
+	        column_s4.setCellValueFactory(c-> new SimpleStringProperty(c.getValue().getPaymentMethod() instanceof CreditCard ? "Credit card" : "Wire transfer"));
+	        column_s4.setStyle("-fx-alignment: CENTER");
+
+	        tableViewStorageFee.getColumns().add(column_s0);
+	        tableViewStorageFee.getColumns().add(column_s1);
+	        tableViewStorageFee.getColumns().add(column_s2);
+	        tableViewStorageFee.getColumns().add(column_s3);
+	        tableViewStorageFee.getColumns().add(column_s4);
+	        
+	        tableViewStorageFee.setItems(FXCollections.observableList(ClientManager.getInstance()
+	        		.getStorageFees(partner.getId())));
+	        
+	        // table set up subscription fee
+	        TableView<SubscriptionFee> tableViewSubscriptionFee = (TableView<SubscriptionFee>) scene.lookup("#subscriptionFee");
+	        
+	        TableColumn<SubscriptionFee, String> column_sb0 = new TableColumn<>("id");
+	        column_sb0.setCellValueFactory(c-> new SimpleStringProperty(String.valueOf(c.getValue().getId())));
+	        column_sb0.setStyle("-fx-alignment: CENTER");
+	        
+	        TableColumn<SubscriptionFee, String> column_sb1 = new TableColumn<>("boat id");
+	        column_sb1.setCellValueFactory(c-> new SimpleStringProperty(String.valueOf(c.getValue().getBoatId())));
+	        column_sb1.setStyle("-fx-alignment: CENTER");
+	        
+	        TableColumn<SubscriptionFee, String> column_sb2 = new TableColumn<>("race id");
+	        column_sb2.setCellValueFactory(c-> new SimpleStringProperty(String.valueOf(c.getValue().getRaceId())));
+	        column_sb2.setStyle("-fx-alignment: CENTER");
+	        
+	        TableColumn<SubscriptionFee, String> column_sb3 = new TableColumn<>("payment date");
+	        column_sb3.setCellValueFactory(c-> new SimpleStringProperty(c.getValue().getDate().toString()));
+	        column_sb3.setStyle("-fx-alignment: CENTER");
+
+
+	        TableColumn<SubscriptionFee, String> column_sb4 = new TableColumn<>("price");
+	        column_sb4.setCellValueFactory(c-> new SimpleStringProperty(String.valueOf(c.getValue().getPrice()) + "€"));
+	        column_sb4.setStyle("-fx-alignment: CENTER");
+	        
+	        TableColumn<SubscriptionFee, String> column_sb5 = new TableColumn<>("payment method");
+	        column_sb5.setCellValueFactory(c-> new SimpleStringProperty(c.getValue().getPaymentMethod() instanceof CreditCard ? "Credit card" : "Wire transfer"));
+	        column_sb5.setStyle("-fx-alignment: CENTER");
+
+	        tableViewSubscriptionFee.getColumns().add(column_sb0);
+	        tableViewSubscriptionFee.getColumns().add(column_sb1);
+	        tableViewSubscriptionFee.getColumns().add(column_sb2);
+	        tableViewSubscriptionFee.getColumns().add(column_sb3);
+	        tableViewSubscriptionFee.getColumns().add(column_sb4);
+	        tableViewSubscriptionFee.getColumns().add(column_sb5);
+	        
+	        tableViewSubscriptionFee.setItems(FXCollections.observableList(ClientManager.getInstance()
+	        		.getSubscriptionFees(partner.getId())));
+	        
+	        ViewManager.getInstance().setScene(scene);
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	/* used to set imageView images */
+	private static void setImageToImageView(ImageView back){
+		File file = new File("img/back-arrow.png");
+        Image image = new Image(file.toURI().toString());
+        back.setImage(image);
+	}
+}

@@ -80,6 +80,7 @@ public class ClubStaffManager {
 	 * @return the toPays
 	 */
 	public List<ToPay> getToPays() {
+		refreshToPays();
 		return toPays;
 	}
 

@@ -10,6 +10,7 @@ import application.client.controllers.clubStaff.AddRacePageController;
 import application.client.controllers.clubStaff.BoatsPageController;
 import application.client.controllers.clubStaff.ClubStaffMainPageController;
 import application.client.controllers.clubStaff.PartnerInfoPageController;
+import application.client.controllers.clubStaff.PaymentsOfPartnerPageController;
 import application.client.controllers.clubStaff.RacesPageController;
 import application.client.controllers.clubStaff.SendPaymentPageController;
 import application.client.controllers.clubStaff.SubscribersPageController;
@@ -98,6 +99,10 @@ public class ViewManager {
 	 * Represents the add race page string. Used to start being passed to the method {@link #showLayout(String)} to be displayed.
 	 **/
 	public static final String ADD_RACE_PAGE = "addRacePage";
+	/**
+	 * Represents the payments of partner page string. Used to start being passed to the method {@link #showLayout(String)} to be displayed.
+	 **/
+	public static final String PAYMENTS_OF_PARTNER_PAGE = "paymentsOfPartnerPage";
 	
 	/* LAYOUT ROOT ELEMENTS */
 	private Stage stage;
@@ -214,6 +219,9 @@ public class ViewManager {
 	        		return;
 	        	case SUBSCRIBERS_PAGE:
 	        		SubscribersPageController.show((Race) object);
+	        		return;
+	        	case PAYMENTS_OF_PARTNER_PAGE:
+	        		PaymentsOfPartnerPageController.show((Partner) object);
 	        		return;
 	        	default:
 	    			System.out.println("No page was found to display.");

@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import application.models.MembershipFee;
-import application.models.Payment;
 import application.models.StorageFee;
 import application.models.SubscriptionFee;
 import application.models.ToPay;

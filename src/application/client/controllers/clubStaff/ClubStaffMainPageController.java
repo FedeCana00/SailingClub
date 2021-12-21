@@ -167,7 +167,7 @@ public class ClubStaffMainPageController {
                 			@Override
                 			public void handle(javafx.event.ActionEvent arg0) {
                 				//pass partner
-	            				ViewManager.getInstance().showLayout(ViewManager.BOATS_PAGE ,getTableView().getItems().get(getIndex()));
+	            				ViewManager.getInstance().showLayout(ViewManager.BOATS_PAGE, getTableView().getItems().get(getIndex()));
                 			}
                 		});
                     	
@@ -206,7 +206,7 @@ public class ClubStaffMainPageController {
 	            			@Override
 	            			public void handle(javafx.event.ActionEvent arg0) {
 	            				//pass partner
-	            				ViewManager.getInstance().showLayout(ViewManager.RACES_PAGE ,getTableView().getItems().get(getIndex()));
+	            				ViewManager.getInstance().showLayout(ViewManager.RACES_PAGE, getTableView().getItems().get(getIndex()));
 	            			}
 	            		});
 	                	
@@ -244,7 +244,8 @@ public class ClubStaffMainPageController {
 	
 	            			@Override
 	            			public void handle(javafx.event.ActionEvent arg0) {
-	            				
+	            				//pass partner
+	            				ViewManager.getInstance().showLayout(ViewManager.PAYMENTS_OF_PARTNER_PAGE, getTableView().getItems().get(getIndex()));
 	            			}
 	            		});
 	                	
@@ -283,7 +284,7 @@ public class ClubStaffMainPageController {
 	            			@Override
 	            			public void handle(javafx.event.ActionEvent arg0) {
 	            				//pass partner
-	            				ViewManager.getInstance().showLayout(ViewManager.PARTNER_INFO_PAGE ,getTableView().getItems().get(getIndex()));
+	            				ViewManager.getInstance().showLayout(ViewManager.PARTNER_INFO_PAGE, getTableView().getItems().get(getIndex()));
 	            			}
 	            		});
 	                	
@@ -379,7 +380,7 @@ public class ClubStaffMainPageController {
                 			@Override
                 			public void handle(javafx.event.ActionEvent arg0) {
                 				//pass race
-	            				ViewManager.getInstance().showLayout(ViewManager.SUBSCRIBERS_PAGE , getTableView().getItems().get(getIndex()));
+	            				ViewManager.getInstance().showLayout(ViewManager.SUBSCRIBERS_PAGE, getTableView().getItems().get(getIndex()));
                 			}
                 		});
                     	

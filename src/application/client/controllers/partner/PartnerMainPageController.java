@@ -60,7 +60,8 @@ public class PartnerMainPageController {
 	        if(PartnerManager.getInstance().getNotifications().isEmpty())
 	        	notifications.setVisible(false);
 	        
-	        buttonCallBack(btnBoats, btnRaces, btnPayments, btnRegistrationNewRace, logout, notifications, notification);
+	        buttonCallBack(btnBoats, btnRaces, btnPayments, btnRegistrationNewRace, logout, notifications, notification
+	        		, anchor, race, coin);
 	        
 	        ViewManager.getInstance().setScene(scene);
 		} catch(Exception e) {
@@ -70,19 +71,44 @@ public class PartnerMainPageController {
 	
 	/* used to implements callback of buttons */
 	private static void buttonCallBack(Button btnBoats, Button btnRaces,  Button btnPayments
-			,  Button btnRegistrationNewRace, ImageView logout, Label notifications, ImageView notification) {
+			,  Button btnRegistrationNewRace, ImageView logout, Label notifications, ImageView notification
+			, ImageView anchor, ImageView race, ImageView coin) {
 		
 		btnBoats.setOnAction((event) -> {
 			ViewManager.getInstance().showLayout(ViewManager.BOATS_PARTNER_PAGE);
 		 });
+		
+		anchor.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+
+            @Override
+            public void handle(MouseEvent event) {
+            	ViewManager.getInstance().showLayout(ViewManager.BOATS_PARTNER_PAGE);
+            }
+        });
 		 
 		btnRaces.setOnAction((event) -> {
 			ViewManager.getInstance().showLayout(ViewManager.RACE_PARTNER_PAGE);
 		 });
 		
+		race.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+
+            @Override
+            public void handle(MouseEvent event) {
+            	ViewManager.getInstance().showLayout(ViewManager.RACE_PARTNER_PAGE);
+            }
+        });
+		
 		btnPayments.setOnAction((event) -> {
 			ViewManager.getInstance().showLayout(ViewManager.PAYMENTS_PARTNER_PAGE);
 		 });
+		
+		coin.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+
+            @Override
+            public void handle(MouseEvent event) {
+            	ViewManager.getInstance().showLayout(ViewManager.PAYMENTS_PARTNER_PAGE);
+            }
+        });
 		
 		btnRegistrationNewRace.setOnAction((event) -> {
 			ViewManager.getInstance().showLayout(ViewManager.NEW_REGISTRATION_PAGE);

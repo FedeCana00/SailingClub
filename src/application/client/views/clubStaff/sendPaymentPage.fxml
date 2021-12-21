@@ -8,7 +8,7 @@
 
 <AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label fx:id="title" alignment="CENTER" layoutX="103.0" layoutY="34.0" prefHeight="62.0" prefWidth="500.0" style="-fx-background-color: #C3F4FF; -fx-background-radius: 50 20 50 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" text="Payments to be sent to the partner" AnchorPane.leftAnchor="83.0" AnchorPane.topAnchor="14.0">
+      <Label fx:id="title" alignment="CENTER" layoutX="103.0" layoutY="34.0" prefHeight="62.0" prefWidth="342.0" style="-fx-background-color: #C3F4FF; -fx-background-radius: 50 20 50 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" text="Payments to be sent to the partner" AnchorPane.leftAnchor="83.0" AnchorPane.topAnchor="14.0">
          <font>
             <Font name="Verdana Bold" size="13.0" />
          </font>
@@ -19,5 +19,6 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
+      <ImageView fx:id="refresh" fitHeight="48.0" fitWidth="55.0" layoutX="517.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>

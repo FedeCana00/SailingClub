@@ -27,8 +27,6 @@ public class PartnerManager {
 	*/
    private PartnerManager() {
        notifications = new ArrayList<Notification>();
-       
-       setNotifications();
    }
 	
    /**
@@ -47,6 +45,8 @@ public class PartnerManager {
 	 * @return the notifications
 	 */
 	public List<Notification> getNotifications() {
+		setNotifications();
+		
 		return notifications;
 	}
 	

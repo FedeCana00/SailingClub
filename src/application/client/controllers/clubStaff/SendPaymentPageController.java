@@ -4,7 +4,6 @@
 package application.client.controllers.clubStaff;
 
 import java.io.File;
-
 import application.client.Client;
 import application.client.managers.ClubStaffManager;
 import application.client.managers.ViewManager;
@@ -34,10 +33,7 @@ public class SendPaymentPageController {
 	 * Used to show the screen. 
 	 **/
 	public static void show() {
-		try {
-			//refresh before get it
-			ClubStaffManager.getInstance().refreshToPays();
-			
+		try {	
 			// Load root layout from fxml file.
 			FXMLLoader loaderStart = new FXMLLoader();
 			loaderStart.setLocation(Client.class.getResource("views/clubStaff/sendPaymentPage.fxml"));
@@ -48,6 +44,7 @@ public class SendPaymentPageController {
 	        
 	        //Initialize components
 	        ImageView back = (ImageView) scene.lookup("#back");
+	        ImageView refresh = (ImageView) scene.lookup("#refresh");
 	        
 	        back.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
 
@@ -57,7 +54,7 @@ public class SendPaymentPageController {
 	            }
 	        });
 	        
-	        setImageToImageView(back);
+	        setImageToImageView(back, refresh);
 	        
 	        // table set up of to pay
 	        TableView<ToPay> tableView = (TableView<ToPay>) scene.lookup("#payment");
@@ -94,6 +91,16 @@ public class SendPaymentPageController {
 	        
 	        //set table items with to pay not yet sent
 	        tableView.setItems(FXCollections.observableList(ClubStaffManager.getInstance().getToPays()));
+	        
+	        //handle click on refresh
+	        refresh.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+
+	            @Override
+	            public void handle(MouseEvent event) {
+	            	tableView.setItems(FXCollections.observableList(ClubStaffManager.getInstance().getToPays()));
+	            	tableView.refresh();
+	            }
+	        });
 	        
 	        ViewManager.getInstance().setScene(scene);
 		} catch(Exception e) {
@@ -157,9 +164,13 @@ public class SendPaymentPageController {
 	}
 	
 	/* used to set imageView images */
-	private static void setImageToImageView(ImageView back){
+	private static void setImageToImageView(ImageView back, ImageView refresh){
 		File file = new File("img/back-arrow.png");
         Image image = new Image(file.toURI().toString());
         back.setImage(image);
+        
+        file = new File("img/refresh.png");
+        image = new Image(file.toURI().toString());
+        refresh.setImage(image);
 	}
 }
