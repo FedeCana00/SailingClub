@@ -13,6 +13,11 @@ public class WireTransfer extends PaymentMethod{
 	private static final long serialVersionUID = 1L;
 	private Date emissionDate;
 	private String referenceCode;
+	
+	/**
+	 * Default constructor. 
+	 */
+	public WireTransfer() {}
 
 	/**
 	 * @param ownerName

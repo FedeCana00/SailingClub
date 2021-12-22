@@ -12,6 +12,14 @@ public class CreditCard extends PaymentMethod{
 	private int cvv;
 	private long cardNumber;
 	private String expirationDate;
+	
+	/**
+	 * Default constructor. 
+	 */
+	public CreditCard() {
+		super();
+	}
+	
 	/**
 	 * @param ownerName
 	 * @param ownerSurname

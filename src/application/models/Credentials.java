@@ -16,6 +16,11 @@ public class Credentials implements Serializable{
 	private String password;
 	
 	/**
+	 * Default constructor. 
+	 */
+	public Credentials() {}
+	
+	/**
 	 * @param username
 	 * @param password
 	 */

@@ -13,6 +13,11 @@ public class Boat implements Serializable{
 	private List<Race> racesRegistered;
 	
 	/**
+	 * Default constructor. 
+	 */
+	public Boat() {}
+	
+	/**
 	 * @param id
 	 * @param name
 	 */

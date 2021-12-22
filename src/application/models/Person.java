@@ -14,6 +14,11 @@ public class Person implements Serializable{
 	private String address;
 	private String fiscalCode;
 	private Credentials credentials;
+	
+	/**
+	 * Default constructor. 
+	 */
+	public Person() {}
 
 	/**
 	 * @param id

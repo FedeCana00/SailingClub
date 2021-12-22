@@ -22,6 +22,11 @@ public class Race implements Serializable{
 	private List<Boat> boats;
 	
 	/**
+	 * Default constructor. 
+	 */
+	public Race() {}
+	
+	/**
 	 * @param name
 	 * @param date
 	 * @param subscriptionPrice

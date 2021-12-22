@@ -6,7 +6,12 @@ public class PaymentMethod implements Serializable{
 	private static final long serialVersionUID = 1L;
 	private int id;
 	private String ownerName;
-	private String ownerSurname;	
+	private String ownerSurname;
+	
+	/**
+	 * Default constructor. 
+	 */
+	public PaymentMethod() {}
 	
 	/**
 	 * @param ownerName

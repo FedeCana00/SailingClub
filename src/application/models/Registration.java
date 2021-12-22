@@ -16,6 +16,11 @@ public class Registration implements Serializable{
 	private Boat boat;
 	
 	/**
+	 * Default constructor.
+	 */
+	public Registration() {}
+	
+	/**
 	 * @param race
 	 * @param boat
 	 */

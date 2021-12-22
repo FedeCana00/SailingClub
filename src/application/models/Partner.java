@@ -15,6 +15,15 @@ public class Partner extends Person {
 	private List<Boat> boats;
 	
 	/**
+	 * Default constructor. 
+	 */
+	public Partner() {
+		super();
+		
+		this.boats = new ArrayList<Boat>();
+	}
+	
+	/**
 	 * @param name
 	 * @param surname
 	 * @param address

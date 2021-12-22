@@ -10,7 +10,7 @@ public class MembershipFee extends Payment{
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * 
+	 * Default constructor.
 	 */
 	public MembershipFee() {
 		super();
@@ -35,6 +35,6 @@ public class MembershipFee extends Payment{
 	 * @param idM
 	 */
 	public MembershipFee(int id, int partnerId, float price, Date date, PaymentMethod paymentMethod) {
-		super(id, price, date, paymentMethod);
+		super(id, partnerId, price, date, paymentMethod);
 	}
 }
