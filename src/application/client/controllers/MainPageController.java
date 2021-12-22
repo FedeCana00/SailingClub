@@ -34,7 +34,7 @@ public class MainPageController {
 		try {
 			// Load root layout from fxml file.
 			FXMLLoader loaderStart = new FXMLLoader();
-			loaderStart.setLocation(Client.class.getResource("views/main.fxml"));
+			loaderStart.setLocation(Client.class.getResource("views/Main.fxml"));
 			AnchorPane rootPane = (AnchorPane) loaderStart.load();
 	        
 	        // Show the scene containing the root layout.

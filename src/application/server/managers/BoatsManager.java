@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import application.models.Boat;
-import application.models.Person;
 
 /**
  * @author Federico Canali

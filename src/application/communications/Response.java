@@ -5,7 +5,7 @@ package application.communications;
  *
  */
 public class Response extends Message{
-	/* CONSTANTS TYPES OF RESPONSE */
+	private static final long serialVersionUID = 1L;
 
 	/**
 	 * {@inheritDoc} 

@@ -7,9 +7,7 @@ import java.io.File;
 
 import application.client.Client;
 import application.client.managers.ClientManager;
-import application.client.managers.UserManager;
 import application.client.managers.ViewManager;
-import application.models.Boat;
 import application.models.CreditCard;
 import application.models.MembershipFee;
 import application.models.Partner;
@@ -40,7 +38,7 @@ public class PaymentsOfPartnerPageController {
 		try {
 			// Load root layout from fxml file.
 			FXMLLoader loaderStart = new FXMLLoader();
-			loaderStart.setLocation(Client.class.getResource("views/clubStaff/paymentsOfPartnerPage.fxml"));
+			loaderStart.setLocation(Client.class.getResource("views/clubStaff/PaymentsOfPartnerPage.fxml"));
 			AnchorPane rootPane = (AnchorPane) loaderStart.load();
 	        
 	        // Show the scene containing the root layout.

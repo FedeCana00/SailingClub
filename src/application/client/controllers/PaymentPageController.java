@@ -54,7 +54,7 @@ public class PaymentPageController {
 		try {
 			// Load root layout from fxml file.
 			FXMLLoader loaderStart = new FXMLLoader();
-			loaderStart.setLocation(Client.class.getResource("views/payment.fxml"));
+			loaderStart.setLocation(Client.class.getResource("views/Payment.fxml"));
 			AnchorPane rootPane = (AnchorPane) loaderStart.load();
 	        
 	        // Show the scene containing the root layout.

@@ -5,8 +5,8 @@ package application.communications;
  *
  */
 public class Request extends Message{
-	/* CONSANTS TYPE OF REQUEST */
-	
+	private static final long serialVersionUID = 1L;
+
 	/**
 	 * {@inheritDoc} 
 	 **/

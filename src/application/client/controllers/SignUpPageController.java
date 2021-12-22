@@ -8,7 +8,6 @@ import application.client.managers.ClientManager;
 import application.client.managers.ViewManager;
 import application.models.Credentials;
 import application.models.Partner;
-import application.models.Person;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -32,7 +31,7 @@ public class SignUpPageController {
 		try {
 			// Load root layout from fxml file.
 			FXMLLoader loaderStart = new FXMLLoader();
-			loaderStart.setLocation(Client.class.getResource("views/signUp.fxml"));
+			loaderStart.setLocation(Client.class.getResource("views/SignUp.fxml"));
 			AnchorPane rootPane = (AnchorPane) loaderStart.load();
 	        
 	        // Show the scene containing the root layout.

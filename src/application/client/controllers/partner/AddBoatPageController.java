@@ -29,7 +29,7 @@ public class AddBoatPageController {
 		try {
 			// Load root layout from fxml file.
 			FXMLLoader loaderStart = new FXMLLoader();
-			loaderStart.setLocation(Client.class.getResource("views/partner/addBoatPage.fxml"));
+			loaderStart.setLocation(Client.class.getResource("views/partner/AddBoatPage.fxml"));
 			AnchorPane rootPane = (AnchorPane) loaderStart.load();
 	        
 	        // Show the scene containing the root layout.

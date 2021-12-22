@@ -33,7 +33,7 @@ public class RacesPartnerPageController {
 		try {
 			// Load root layout from fxml file.
 			FXMLLoader loaderStart = new FXMLLoader();
-			loaderStart.setLocation(Client.class.getResource("views/partner/racesPartnerPage.fxml"));
+			loaderStart.setLocation(Client.class.getResource("views/partner/RacesPartnerPage.fxml"));
 			AnchorPane rootPane = (AnchorPane) loaderStart.load();
 	        
 	        // Show the scene containing the root layout.

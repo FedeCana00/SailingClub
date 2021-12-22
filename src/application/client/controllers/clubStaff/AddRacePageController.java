@@ -8,11 +8,8 @@ import java.util.Calendar;
 
 import application.client.Client;
 import application.client.managers.ClientManager;
-import application.client.managers.ClubStaffManager;
-import application.client.managers.UserManager;
 import application.client.managers.ViewManager;
 import application.managers.AlertManager;
-import application.models.Boat;
 import application.models.Race;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
@@ -36,7 +33,7 @@ public class AddRacePageController {
 		try {
 			// Load root layout from fxml file.
 			FXMLLoader loaderStart = new FXMLLoader();
-			loaderStart.setLocation(Client.class.getResource("views/clubStaff/addRacePage.fxml"));
+			loaderStart.setLocation(Client.class.getResource("views/clubStaff/AddRacePage.fxml"));
 			AnchorPane rootPane = (AnchorPane) loaderStart.load();
 	        
 	        // Show the scene containing the root layout.

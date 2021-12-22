@@ -10,12 +10,9 @@ import application.client.managers.ClientManager;
 import application.client.managers.ClubStaffManager;
 import application.client.managers.UserManager;
 import application.client.managers.ViewManager;
-import application.managers.AlertManager;
-import application.models.Boat;
 import application.models.ClubStaff;
 import application.models.Partner;
 import application.models.Race;
-import application.server.managers.RacesManager;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.event.EventHandler;
@@ -49,7 +46,7 @@ public class ClubStaffMainPageController {
 			
 			// Load root layout from fxml file.
 			FXMLLoader loaderStart = new FXMLLoader();
-			loaderStart.setLocation(Client.class.getResource("views/clubStaff/mainClubStaffPage.fxml"));
+			loaderStart.setLocation(Client.class.getResource("views/clubStaff/MainClubStaffPage.fxml"));
 			AnchorPane rootPane = (AnchorPane) loaderStart.load();
 	        
 	        // Show the scene containing the root layout.

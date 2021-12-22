@@ -8,6 +8,7 @@ package application.models;
  *
  */
 public class CreditCard extends PaymentMethod{
+	private static final long serialVersionUID = 1L;
 	private int cvv;
 	private long cardNumber;
 	private String expirationDate;

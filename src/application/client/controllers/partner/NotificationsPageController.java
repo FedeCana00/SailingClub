@@ -34,7 +34,7 @@ public class NotificationsPageController {
 		try {
 			// Load root layout from fxml file.
 			FXMLLoader loaderStart = new FXMLLoader();
-			loaderStart.setLocation(Client.class.getResource("views/partner/notificationsPage.fxml"));
+			loaderStart.setLocation(Client.class.getResource("views/partner/NotificationsPage.fxml"));
 			AnchorPane rootPane = (AnchorPane) loaderStart.load();
 	        
 	        // Show the scene containing the root layout.

@@ -36,7 +36,7 @@ public class SendPaymentPageController {
 		try {	
 			// Load root layout from fxml file.
 			FXMLLoader loaderStart = new FXMLLoader();
-			loaderStart.setLocation(Client.class.getResource("views/clubStaff/sendPaymentPage.fxml"));
+			loaderStart.setLocation(Client.class.getResource("views/clubStaff/SendPaymentPage.fxml"));
 			AnchorPane rootPane = (AnchorPane) loaderStart.load();
 	        
 	        // Show the scene containing the root layout.
