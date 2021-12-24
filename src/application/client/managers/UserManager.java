@@ -9,7 +9,8 @@ import application.models.Person;
 import application.models.Registration;
 
 /**
- * This class takes care of keeping information about the logged in user.
+ * This class is a singleton pattern. This class takes care of keeping information about the logged in user.
+ * 
  * @author Federico Canali
  */
 public class UserManager {
@@ -56,7 +57,7 @@ public class UserManager {
 	}
 	
 	/**
-	 * Update partner's boat list 
+	 * Update partner's boat list.
 	 **/
 	public void updateBoats() {
 		if(person == null || person instanceof Partner == false)
@@ -67,6 +68,7 @@ public class UserManager {
 	
 	/**
 	 * Add new partner's boat.
+	 * @param boat Represents the boat to add.
 	 **/
 	public void addNewBoat(Boat boat) {
 		boat.setPartnerId(person.getId());
@@ -76,7 +78,8 @@ public class UserManager {
 	}
 	
 	/**
-	 * Used to remove boat. 
+	 * Used to remove boat.
+	 * @param boat Represents the boat to remove.
 	 **/
 	public void removeBoat(Boat boat) {
 		boat.setPartnerId(person.getId());
@@ -86,8 +89,8 @@ public class UserManager {
 	}
 	
 	/**
-	 * Used to get all registration.
-	 * @return all the registration.
+	 * Used to get all registrations.
+	 * @return all the registrations.
 	 **/
 	public List<Registration> getRegistration(){
 		List<Registration> registrations = new ArrayList<Registration>();
@@ -102,8 +105,8 @@ public class UserManager {
 	}
 	
 	/**
-	 * Add new registration to a race.
-	 * @param registration is the registration that must be send to server. 
+	 * Add new registration.
+	 * @param registration Represents the registration that must be send to server. 
 	 **/
 	public void addRegistration(Registration registration) {
 		ClientManager.getInstance().addRegistration(registration);

@@ -1,6 +1,3 @@
-/**
- * 
- */
 package application.client.managers;
 
 import java.util.ArrayList;
@@ -9,8 +6,9 @@ import java.util.List;
 import application.models.Notification;
 
 /**
+ * This class is a singleton pattern. It deals with the management of partner user.
+ * 
  * @author Federico Canali
- *
  */
 public class PartnerManager {
 	

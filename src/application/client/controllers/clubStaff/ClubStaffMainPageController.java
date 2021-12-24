@@ -1,6 +1,3 @@
-/**
- * 
- */
 package application.client.controllers.clubStaff;
 
 import java.io.File;
@@ -30,8 +27,14 @@ import javafx.scene.layout.AnchorPane;
 import javafx.util.Callback;
 
 /**
+ * The class represents the fxml screen controller
+ * of club staff main page.
+ * 
+ * Handles events and configures the screen.
+ * 
+ * Controller related to the fxml file is MainClubStaffPage.fxml inside {@link application.client.views.clubStaff}.
+ * 
  * @author Federico Canali
- *
  */
 public class ClubStaffMainPageController {
 	

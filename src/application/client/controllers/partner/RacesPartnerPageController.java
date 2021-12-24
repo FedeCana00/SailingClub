@@ -22,8 +22,15 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 /**
+ * The class represents the fxml screen controller
+ * of partner's race page.
+ * 
+ * Handles events and configures the screen. In particular, this controller 
+ * manages the display of all the races to which he is enrolled.
+ * 
+ * Controller related to the fxml file is RacesPartnerPage.fxml inside {@link application.client.views.partner}.
+ * 
  * @author Federico Canali
- *
  */
 public class RacesPartnerPageController {
 	/**

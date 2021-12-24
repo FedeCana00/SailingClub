@@ -25,8 +25,15 @@ import javafx.scene.layout.AnchorPane;
 import javafx.util.Callback;
 
 /**
+ * The class represents the fxml screen controller
+ * of send payment page.
+ * 
+ * Handles events and configures the screen. In particular, this controller 
+ * manages the sending of payment notifications to partners.
+ * 
+ * Controller related to the fxml file is SendPaymentPage.fxml inside {@link application.client.views.clubStaff}.
+ * 
  * @author Federico Canali
- *
  */
 public class SendPaymentPageController {
 	/**

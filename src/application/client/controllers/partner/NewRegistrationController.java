@@ -1,6 +1,3 @@
-/**
- * 
- */
 package application.client.controllers.partner;
 
 import java.io.File;
@@ -31,9 +28,15 @@ import javafx.scene.layout.AnchorPane;
 import javafx.util.Callback;
 
 /**
- * TODO: transform into page not alert
+ * The class represents the fxml screen controller
+ * of add registration page.
+ * 
+ * Handles events and configures the screen. In particular, this controller 
+ * manages the addiction of registration to a race by a boat.
+ * 
+ * Controller related to the fxml file is NewRegistrationPage.fxml inside {@link application.client.views.partner}.
+ * 
  * @author Federico Canali
- *
  */
 public class NewRegistrationController {
 	

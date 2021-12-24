@@ -1,6 +1,3 @@
-/**
- * 
- */
 package application.client.controllers.clubStaff;
 
 import java.io.File;
@@ -24,12 +21,20 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 /**
+ * The class represents the fxml screen controller
+ * of subscribers page.
+ * 
+ * Handles events and configures the screen. In particular, this controller 
+ * manages the display of boats entered in the race.
+ * 
+ * Controller related to the fxml file is SubscribersPage.fxml inside {@link application.client.views.clubStaff}.
+ * 
  * @author Federico Canali
- *
  */
 public class SubscribersPageController {
 	/**
-	 * Used to show the screen. 
+	 * Used to show the screen.
+	 * @param race Represents the race whose boats we want to view.
 	 **/
 	public static void show(Race race) {
 		try {

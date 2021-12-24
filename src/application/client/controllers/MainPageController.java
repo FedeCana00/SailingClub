@@ -1,6 +1,3 @@
-/**
- * 
- */
 package application.client.controllers;
 
 import application.client.Client;
@@ -20,8 +17,11 @@ import javafx.scene.layout.AnchorPane;
 
 /**
  * The class represents the fxml screen controller
- * of MainPage. 
+ * of Main page. 
+ * 
  * Handles events and configures the screen.
+ * 
+ * Controller related to the fxml file is Main.fxml inside {@link application.client.views}.
  * 
  * @author Federico Canali
  */

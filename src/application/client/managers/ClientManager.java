@@ -26,8 +26,9 @@ import application.models.SubscriptionFee;
 import application.models.ToPay;
 
 /**
+ * This class is a singleton pattern. It deals with the management of requests and responses to the server.
+ * 
  * @author Federico Canali
- *
  */
 public class ClientManager {
 	private static final int SERVER_PORT = 8080;
@@ -63,6 +64,7 @@ public class ClientManager {
    
    /**
     * Used to request to server access (login).
+    * @param credentials Represents the username and password of user.
     * @return returns if the access has been accepted or refused.
     **/
    public boolean login(Credentials credentials) {
@@ -111,7 +113,8 @@ public class ClientManager {
    }
    
    /** 
-    * Used to ask to server informations about user connected 
+    * Used to ask to server informations about user connected.
+    * @return returns true if the executive was successful. 
     */
    public boolean userInformation() {
 	   try {
@@ -157,6 +160,7 @@ public class ClientManager {
    
    /**
     * Used to request to server if already exist this username.
+    * @param credentials Represents the username and password of user.
     * @return returns if exists or not.
     **/
    public boolean hasSomeUserSameUserName(Credentials credentials) {
@@ -206,7 +210,8 @@ public class ClientManager {
    
    /**
     * Used add new Partner to database.
-    * @return returns true.
+    * @param partner Represents the partner information to add.
+    * @return returns true if the executive was successful. 
     **/
    public boolean addPerson(Partner partner) {
 	   try {
@@ -255,6 +260,7 @@ public class ClientManager {
    
    /**
     * Used request partner boats from database.
+    * @param partnerId Represents the id of partner's boats.
     * @return returns list of boats.
     **/
    public List<Boat> updatePartnerBoats(int partnerId) {
@@ -305,7 +311,8 @@ public class ClientManager {
    
    /**
     * Used to add new partner's boat to database.
-    * @return returns true.
+    * @param boat Represents the boat to add.
+    * @return returns true if the executive was successful. 
     **/
    public boolean addBoat(Boat boat) {
 	   try {
@@ -354,7 +361,8 @@ public class ClientManager {
    
    /**
     * Used to remove a partner's boat to database.
-    * @return returns true.
+    * @param boat Represents the boat to remove.
+    * @return returns true if the executive was successful. 
     **/
    public boolean removeBoat(Boat boat) {
 	   try {
@@ -403,7 +411,7 @@ public class ClientManager {
    
    /**
     * Used to get all races available.
-    * @return returns races.
+    * @return returns all races in database.
     **/
    public List<Race> getAllRaces() {
 	   try {
@@ -451,8 +459,9 @@ public class ClientManager {
    }
    
    /**
-    * Used to send new registration to database.
-    * @return returns true.
+    * Used to add new registration to database.
+    * @param registration Represents the registration to add.
+    * @return returns true if the executive was successful. 
     **/
    public boolean addRegistration(Registration registration) {
 	   try {
@@ -502,7 +511,7 @@ public class ClientManager {
    
    /**
     * Used to send logout request to server.
-    * @return returns true.
+    * @return returns true if the executive was successful. 
     **/
    public boolean logout() {
 	   try {
@@ -551,7 +560,8 @@ public class ClientManager {
    
    /**
     * Used to send payment request to server.
-    * @return returns true.
+    * @param payment Represents the payment to add.
+    * @return returns true if the executive was successful. 
     **/
    public boolean insertPayment(Payment payment) {
 	   try {
@@ -600,7 +610,7 @@ public class ClientManager {
    
    /**
     * Used to request to server all partners.
-    * @return returns true.
+    * @return returns true if the executive was successful. 
     **/
    public boolean getAllPartners() {
 	   try {
@@ -650,7 +660,7 @@ public class ClientManager {
    
    /**
     * Used to request to server all subscribers (boats) of specific race.
-    * @param raceId is the id of that specific race.
+    * @param raceId Represents the id of that specific race.
     * @return list of boats.
     **/
    public List<Boat> getAllSubscribers(int raceId) {
@@ -700,7 +710,8 @@ public class ClientManager {
    
    /**
     * Used to add race to database.
-    * @return returns true.
+    * @param race Represents the race to add.
+    * @return returns true if the executive was successful. 
     **/
    	public boolean addRace(Race race) {
 	   try {
@@ -749,7 +760,8 @@ public class ClientManager {
    
    /**
     * Used to remove a race from database.
-    * @return returns true.
+    * @param race Represents the race to remove.
+    * @return returns true if the executive was successful. 
     **/
    	public boolean removeRace(Race race) {
 	   try {
@@ -847,8 +859,8 @@ public class ClientManager {
    
    /**
     * Used to send payment notification to partner.
-    * @param toPay is the payment to send.
-    * @return true.
+    * @param toPay Represents the payment to send.
+    * @return returns true if the executive was successful. 
     **/
    public boolean sendNotificationOfPayment(ToPay toPay) {
 	   try {
@@ -897,6 +909,7 @@ public class ClientManager {
    
    /**
     * Used to get all notifications of partner.
+    * @param partnerId Represents the partner id of notifications.
     * @return returns list of notifications.
     **/
    public List<Notification> getNotifications(int partnerId) {
@@ -946,6 +959,7 @@ public class ClientManager {
    
    /**
     * Used to get all to pay of partner.
+    * @param partnerId Represents the partner id of to pay.
     * @return returns list of to pay.
     **/
    public List<ToPay> getToPaysOfPartner(int partnerId) {
@@ -995,7 +1009,8 @@ public class ClientManager {
    
    /**
     * Used to get all membership fees of partner.
-    * @return returns list of to pay.
+    * @param partnerId Represents the partner id of that fee.
+    * @return returns list of membership fee.
     **/
    public List<MembershipFee> getMembershipFees(int partnerId) {
 	   try {
@@ -1044,6 +1059,7 @@ public class ClientManager {
    
    /**
     * Used to get all subscription fees of partner.
+    * @param partnerId Represents the partner id of that subscription fee.
     * @return returns list of subscription fees.
     **/
    public List<SubscriptionFee> getSubscriptionFees(int partnerId) {
@@ -1093,6 +1109,7 @@ public class ClientManager {
    
    /**
     * Used to get all storage fees of partner.
+    * @param partnerId Represents the partner id of that storage fee.
     * @return returns list of storage fees.
     **/
    public List<StorageFee> getStorageFees(int partnerId) {
@@ -1141,9 +1158,9 @@ public class ClientManager {
    }
    
    /**
-    * Used to delete toPay.
+    * Used to delete toPay from database.
     * @param toPay is the payment to remove.
-    * @return true.
+    * @return returns true if the executive was successful. 
     **/
    public boolean deleteToPay(ToPay toPay) {
 	   try {

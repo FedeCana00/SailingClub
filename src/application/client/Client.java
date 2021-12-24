@@ -4,9 +4,16 @@ import application.client.managers.ViewManager;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
-
+/**
+ * This class is the main class of the client.
+ * 
+ * @author Federico Canali
+ */
 public class Client extends Application {
 	
+	/**
+	 * {@inheritDoc} 
+	 */
 	@Override
     public void start(Stage primaryStage) {
         

@@ -22,8 +22,15 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 /**
+ * The class represents the fxml screen controller
+ * of add race page.
+ * 
+ * Handles events and configures the screen. In particular, this controller 
+ * manages the addition a new race.
+ * 
+ * Controller related to the fxml file is AddRacePage.fxml inside {@link application.client.views.clubStaff}.
+ * 
  * @author Federico Canali
- *
  */
 public class AddRacePageController {
 	/**

@@ -1,6 +1,3 @@
-/**
- * 
- */
 package application.client.controllers.clubStaff;
 
 import java.io.File;
@@ -24,12 +21,20 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 /**
+ * The class represents the fxml screen controller
+ * of partner races page.
+ * 
+ * Handles events and configures the screen. In particular, this controller 
+ * manages the display the races in which the partner is registered.
+ * 
+ * Controller related to the fxml file is RacesPage.fxml inside {@link application.client.views.clubStaff}.
+ * 
  * @author Federico Canali
- *
  */
 public class RacesPageController {
 	/**
 	 * Used to show the screen. 
+	 * @param partner Represents the partner whose races we want to view.
 	 **/
 	public static void show(Partner partner) {
 		try {

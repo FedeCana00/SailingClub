@@ -37,18 +37,37 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 /**
+ * The class represents the fxml screen controller
+ * of payment page.
+ * 
+ * Handles events and configures the screen. In particular, this controller 
+ * manages the payments that the partners will have to make.
+ * 
+ * Controller related to the fxml file is Payment.fxml inside {@link application.client.views}.
+ * 
  * @author Federico Canali
- *
  */
 public class PaymentPageController {
 	
 	/* CONSTANST OF OPEATION */
+	/**
+	 * Represents String of payment the payment of the subscription fee for a race.
+	 **/
 	public static final String OPERATION_SUBSCRIPTION_FEE = "operationSubscriptionFee";
+	/**
+	 * Represents String of payment the payment of the membership fee.
+	 **/
 	public static final String OPERATION_MEMBERSHIP_FEE = "operationMembershipFee";
+	/**
+	 * Represents String of payment the payment of the storage fee.
+	 **/
 	public static final String OPERATION_STORAGE_FEEE = "operationStorageFee";
 	
 	/**
-	 * Used to show the screen. 
+	 * Used to show the screen.
+	 * @param price It represents the price to pay for this operation.
+	 * @param objectToHandle Represents a possible object to manage once passed. It depends on the type of payment.
+	 * @param operation Represents the type of payment that will have to be made.
 	 **/
 	public static void show(float price, Object objectToHandle, String operation) {
 		try {

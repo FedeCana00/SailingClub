@@ -1,6 +1,3 @@
-/**
- * 
- */
 package application.client.controllers.clubStaff;
 
 import java.io.File;
@@ -27,12 +24,20 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 /**
+ * The class represents the fxml screen controller
+ * of partner's payments page.
+ * 
+ * Handles events and configures the screen. In particular, this controller 
+ * manages the display of payments made by the partner.
+ * 
+ * Controller related to the fxml file is PaymentsOfPartner.fxml inside {@link application.client.views.clubStaff}.
+ * 
  * @author Federico Canali
- *
  */
 public class PaymentsOfPartnerPageController {
 	/**
-	 * Used to show the screen. 
+	 * Used to show the screen.
+	 * @param partner Represents the partner whose payments we want to view. 
 	 **/
 	public static void show(Partner partner) {
 		try {

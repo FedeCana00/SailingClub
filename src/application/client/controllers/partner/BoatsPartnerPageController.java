@@ -1,6 +1,3 @@
-/**
- * 
- */
 package application.client.controllers.partner;
 
 import java.io.File;
@@ -27,8 +24,15 @@ import javafx.scene.layout.AnchorPane;
 import javafx.util.Callback;
 
 /**
+ * The class represents the fxml screen controller
+ * of partner's boat page.
+ * 
+ * Handles events and configures the screen. In particular, this controller 
+ * manage the display of partner boats.
+ * 
+ * Controller related to the fxml file is BoatsPartnerPage.fxml inside {@link application.client.views.partner}.
+ * 
  * @author Federico Canali
- *
  */
 public class BoatsPartnerPageController {
 	

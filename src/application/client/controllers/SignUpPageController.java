@@ -20,6 +20,14 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 /**
+ * The class represents the fxml screen controller
+ * of sign up page.
+ * 
+ * Handles events and configures the screen. In particular, this controller manages 
+ * the registrations of new partners.
+ * 
+ * Controller related to the fxml file is SignUp.fxml inside {@link application.client.views}.
+ * 
  * @author Federico Canali
  */
 public class SignUpPageController {

@@ -27,7 +27,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
- * This class is used to manage the display of views.
+ * This class is a singleton pattern. This class is used to manage the display of views.
  * 
  * @author Federico Canali
  */
@@ -133,9 +133,9 @@ public class ViewManager {
    }
    
    /**
-     * show the root layout.
+     * Show the root layout.
      * 
-     * @param page is the string of the page you want to view.
+     * @param page Represents the string of the page you want to view.
      */
     public void showLayout(String page) {
         try {
@@ -186,10 +186,11 @@ public class ViewManager {
     }
     
     /**
-     * show the payment layout.
-     * @param price
-     * @param objectToInsert
-     * @param operation
+     * Show the payment layout.
+     * 
+     * @param price It represents the price to pay for this operation.
+	 * @param objectToHandle Represents a possible object to manage once passed. It depends on the type of payment.
+	 * @param operation Represents the type of payment that will have to be made.
      */
     public void showLayout(float price, Object objectToInsert, String operation) {
         try {
@@ -202,8 +203,10 @@ public class ViewManager {
     }
     
     /**
-     * show the club staff info layout.
-     * @param partner
+     * Show the partner info layout.
+     * 
+     * @param page Represents the string of the page you want to view.
+     * @param object Represents the object to pass.
      */
     public void showLayout(String page, Object object) {
         try {

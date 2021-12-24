@@ -1,7 +1,6 @@
 /**
+ * Contains all the club staff's fxml files.
  * 
- */
-/**
  * @author Federico Canali
  *
  */

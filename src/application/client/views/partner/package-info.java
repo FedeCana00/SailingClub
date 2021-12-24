@@ -1,7 +1,6 @@
 /**
+ * Contains all the partner's fxml files.
  * 
- */
-/**
  * @author Federico Canali
  *
  */

@@ -18,8 +18,15 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 /**
+ * The class represents the fxml screen controller
+ * of add boat page.
+ * 
+ * Handles events and configures the screen. In particular, this controller 
+ * manages the addiction of boat.
+ * 
+ * Controller related to the fxml file is AddBoatPage.fxml inside {@link application.client.views.partner}.
+ * 
  * @author Federico Canali
- *
  */
 public class AddBoatPageController {
 	/**

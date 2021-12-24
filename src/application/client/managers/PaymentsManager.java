@@ -1,6 +1,3 @@
-/**
- * 
- */
 package application.client.managers;
 
 import java.util.ArrayList;
@@ -12,8 +9,9 @@ import application.models.SubscriptionFee;
 import application.models.ToPay;
 
 /**
+ * This class is a singleton pattern. It deals with the management of payment.
+ * 
  * @author Federico Canali
- *
  */
 public class PaymentsManager {
 	/* VARIABLES */
@@ -52,7 +50,7 @@ public class PaymentsManager {
    }
    
    /***
-    * 
+    * Used to log off the user.
     */
    public void logout() {
 	   toPays.clear();

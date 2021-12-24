@@ -1,6 +1,3 @@
-/**
- * 
- */
 package application.client.managers;
 
 import java.util.ArrayList;
@@ -12,8 +9,9 @@ import application.models.Registration;
 import application.models.ToPay;
 
 /**
+ * This class is a singleton pattern. It deals with the management of club staff user.
+ * 
  * @author Federico Canali
- *
  */
 public class ClubStaffManager {
 	
@@ -107,8 +105,8 @@ public class ClubStaffManager {
 	
 	/**
 	 * Used to get all registration of specific partner.
-	 * @param partner.
-	 * @return all the registration.
+	 * @param partner Represents the partner whose registration we want.
+	 * @return all the registrations.
 	 **/
 	public List<Registration> getRegistrationOfPartner(Partner partern){
 		List<Registration> registrations = new ArrayList<Registration>();
@@ -124,7 +122,7 @@ public class ClubStaffManager {
 	
 	/**
 	 * Used to send notification to user of payment.
-	 * @param toPay.
+	 * @param toPay Represents the toPay associated to notification.
 	 */
 	public void sendNotificationOfPayment(ToPay toPay) {
 		ClientManager.getInstance().sendNotificationOfPayment(toPay);
@@ -132,7 +130,7 @@ public class ClubStaffManager {
 	
 	/**
 	 * Remove race.
-	 * @param race to remove. 
+	 * @param race Represetns the race to remove. 
 	 **/
 	public void removeRace(Race race) {
 		ClientManager.getInstance().removeRace(race);

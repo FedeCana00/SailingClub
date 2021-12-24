@@ -1,6 +1,3 @@
-/**
- * 
- */
 package application.client.controllers.partner;
 
 import java.io.File;
@@ -23,8 +20,15 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 /**
+ * The class represents the fxml screen controller
+ * of notifications page.
+ * 
+ * Handles events and configures the screen. In particular, this controller 
+ * manages the display of notifications received by partnert and sent by club staff.
+ * 
+ * Controller related to the fxml file is NotificationsPage.fxml inside {@link application.client.views.partner}.
+ * 
  * @author Federico Canali
- *
  */
 public class NotificationsPageController {
 	/**

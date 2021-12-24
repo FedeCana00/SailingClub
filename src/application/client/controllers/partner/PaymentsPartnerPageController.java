@@ -1,6 +1,3 @@
-/**
- * 
- */
 package application.client.controllers.partner;
 
 import java.io.File;
@@ -30,8 +27,15 @@ import javafx.scene.layout.AnchorPane;
 import javafx.util.Callback;
 
 /**
+ * The class represents the fxml screen controller
+ * of partner's payments page.
+ * 
+ * Handles events and configures the screen. In particular, this controller 
+ * manages the display of payments paid and allow to pay some fee.
+ * 
+ * Controller related to the fxml file is PaymentsPartnerPage.fxml inside {@link application.client.views.partner}.
+ * 
  * @author Federico Canali
- *
  */
 public class PaymentsPartnerPageController {
 	/**

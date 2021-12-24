@@ -17,8 +17,14 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 /**
+ * The class represents the fxml screen controller
+ * of partner main page.
+ * 
+ * Handles events and configures the screen.
+ * 
+ * Controller related to the fxml file is MainPartnerPage.fxml inside {@link application.client.views.partner}.
+ * 
  * @author Federico Canali
- *
  */
 public class PartnerMainPageController {
 	
