@@ -1,26 +1,37 @@
-/**
- * 
- */
 package application.models;
 
 import java.io.Serializable;
 
 /**
+ * This class represents the notifications a partner receives.
+ * 
  * @author Federico Canali
  *
  */
 public class Notification implements Serializable{
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Represents the id of the notification.
+	 */
 	private int id;
+	/**
+	 * Represents the message of the notification.
+	 */
 	private String message;
+	/**
+	 * Represents the id of the partner of the notification.
+	 */
 	private int partnerId;
+	/**
+	 * Represents the id of the payment to pay.
+	 */
 	private int toPayId;
 	
 	/**
-	 * @param id
-	 * @param message
-	 * @param partnerId
-	 * @param toPayId
+	 * @param id is the id of the notification.
+	 * @param message is the message of the notification.
+	 * @param partnerId is the id of the partner of the notification.
+	 * @param toPayId is the id of the payment to pay.
 	 */
 	public Notification(int id, String message, int partnerId, int toPayId) {
 		super();
@@ -31,9 +42,9 @@ public class Notification implements Serializable{
 	}
 
 	/**
-	 * @param message
-	 * @param partnerId
-	 * @param toPayId
+	 * @param message is the message of the notification.
+	 * @param partnerId is the id of the partner of the notification.
+	 * @param toPayId is the id of the payment to pay.
 	 */
 	public Notification(String message, int partnerId, int toPayId) {
 		super();
@@ -103,6 +114,9 @@ public class Notification implements Serializable{
 		this.toPayId = toPayId;
 	}
 	
+	/**
+	 * {@inheritDoc} 
+	 */
 	@Override
 	public String toString() {
 		return "[ id = " + id + " , message = " + message

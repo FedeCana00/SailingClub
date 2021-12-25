@@ -3,7 +3,7 @@ package application.client.controllers;
 import java.io.File;
 
 import application.client.Client;
-import application.managers.AlertManager;
+import application.client.managers.AlertManager;
 import application.client.managers.ClientManager;
 import application.client.managers.ViewManager;
 import application.models.Credentials;

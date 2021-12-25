@@ -1,9 +1,9 @@
 package application.client.controllers;
 
 import application.client.Client;
+import application.client.managers.AlertManager;
 import application.client.managers.ClientManager;
 import application.client.managers.UserManager;
-import application.managers.AlertManager;
 import application.client.managers.ViewManager;
 import application.models.ClubStaff;
 import application.models.Credentials;

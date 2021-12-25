@@ -1,28 +1,42 @@
-/**
- * 
- */
 package application.models;
 
 import java.io.Serializable;
 
 /**
+ * This class represents the payment that has yet to be paid.
+ * 
  * @author Federico Canali
  *
  */
 public class ToPay implements Serializable{
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Represents the id of the to pay.
+	 */
 	private int id;
+	/**
+	 * Represents the id of partner.
+	 */
 	private int partnerId;
+	/**
+	 * Represents the price to pay.
+	 */
 	private float price;
+	/**
+	 * Represents the id of the boat.
+	 */
 	private int boatId;
+	/**
+	 * Represents if it is membership fee or storage fee.
+	 */
 	private boolean isMembershipFee;
 	
 	/**
-	 * @param id
-	 * @param partnerId
-	 * @param price
-	 * @param isMembershipFee
-	 * @param boatId
+	 * @param id is the id of the to pay.
+	 * @param partnerId is the id of partner.
+	 * @param price is the price to pay.
+	 * @param isMembershipFee check if it is membership fee or storage fee.
+	 * @param boatId is the id of the boat.
 	 */
 	public ToPay(int id, int partnerId, float price, boolean isMembershipFee, int boatId) {
 		super();
@@ -34,10 +48,10 @@ public class ToPay implements Serializable{
 	}
 
 	/**
-	 * @param partnerId
-	 * @param price
-	 * @param isMembershipFee
-	 * @param boatId
+	 * @param partnerId is the id of partner.
+	 * @param price is the price to pay.
+	 * @param isMembershipFee check if it is membership fee or storage fee.
+	 * @param boatId is the id of the boat.
 	 */
 	public ToPay(int partnerId, float price, boolean isMembershipFee, int boatId) {
 		super();
@@ -48,10 +62,10 @@ public class ToPay implements Serializable{
 	}
 	
 	/**
-	 * @param id
-	 * @param partnerId
-	 * @param price
-	 * @param isMembershipFee
+	 * @param id is the id of the to pay.
+	 * @param partnerId is the id of partner.
+	 * @param price is the price to pay.
+	 * @param isMembershipFee check if it is membership fee or storage fee.
 	 */
 	public ToPay(int id, int partnerId, float price, boolean isMembershipFee) {
 		super();
@@ -62,9 +76,9 @@ public class ToPay implements Serializable{
 	}
 
 	/**
-	 * @param partnerId
-	 * @param price
-	 * @param isMembershipFee
+	 * @param partnerId is the id of partner.
+	 * @param price is the price to pay.
+	 * @param isMembershipFee check if it is membership fee or storage fee.
 	 */
 	public ToPay(int partnerId, float price, boolean isMembershipFee) {
 		super();
@@ -148,6 +162,9 @@ public class ToPay implements Serializable{
 		this.isMembershipFee = isMembershipFee;
 	}
 	
+	/**
+	 * {@inheritDoc} 
+	 */
 	@Override
 	public String toString() {
 		return "[ id = " + id + " , price = " + price 

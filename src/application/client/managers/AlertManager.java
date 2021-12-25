@@ -1,4 +1,4 @@
-package application.managers;
+package application.client.managers;
 
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;

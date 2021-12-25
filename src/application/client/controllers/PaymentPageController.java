@@ -11,11 +11,11 @@ import java.util.Calendar;
 
 import application.classes.TypeOfPaymentMethod;
 import application.client.Client;
+import application.client.managers.AlertManager;
 import application.client.managers.ClientManager;
 import application.client.managers.PaymentsManager;
 import application.client.managers.UserManager;
 import application.client.managers.ViewManager;
-import application.managers.AlertManager;
 import application.models.CreditCard;
 import application.models.MembershipFee;
 import application.models.Payment;

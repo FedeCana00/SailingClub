@@ -1,18 +1,26 @@
-/**
- * 
- */
 package application.models;
 
 import java.io.Serializable;
 
 /**
+ * This class represents an entry to a race by a sailboat.
+ * 
  * @author Federico Canali
  *
  */
 public class Registration implements Serializable{
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Represents the id of the registration.
+	 */
 	private int id;
+	/**
+	 * Represents the race to register for.
+	 */
 	private Race race;
+	/**
+	 * Represents the boat to register.
+	 */
 	private Boat boat;
 	
 	/**
@@ -21,8 +29,8 @@ public class Registration implements Serializable{
 	public Registration() {}
 	
 	/**
-	 * @param race
-	 * @param boat
+	 * @param race is the race to register for.
+	 * @param boat is the boat to register.
 	 */
 	public Registration(Race race, Boat boat) {
 		super();
@@ -31,9 +39,9 @@ public class Registration implements Serializable{
 	}
 
 	/**
-	 * @param id
-	 * @param race
-	 * @param boat
+	 * @param id is the id of the registration.
+	 * @param race is the race to register for.
+	 * @param boat is the boat to register.
 	 */
 	public Registration(int id, Race race, Boat boat) {
 		super();
@@ -84,6 +92,9 @@ public class Registration implements Serializable{
 		this.boat = boat;
 	}
 	
+	/**
+	 * {@inheritDoc} 
+	 */
 	@Override
 	public String toString() {
 		return "[ id = " + id + ", boat : [" 

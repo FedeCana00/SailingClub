@@ -14,6 +14,11 @@ import application.models.SubscriptionFee;
 import application.models.ToPay;
 
 /**
+ * This class deals with the management of the server messages.
+ * 
+ * @see application.server.Server
+ * @see application.communications.Message
+ * 
  * @author Federico Canali
  *
  */

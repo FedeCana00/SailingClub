@@ -1,32 +1,38 @@
-/**
- * 
- */
 package application.models;
 
 import java.sql.Date;
 
 /**
+ * This class represents subscription fee of sailing club.
+ * 
  * @author Federico Canali
  *
  */
 public class SubscriptionFee extends Payment{
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Represents the id of the race.
+	 */
 	private int raceId;
+	/**
+	 * Represents the id of the boat.
+	 */
 	private int boatId;
 	
 	/**
-	 * 
+	 * Default constructor.
 	 */
 	public SubscriptionFee() {
 		super();
 	}
 
 	/**
-	 * @param price
-	 * @param date
-	 * @param paymentMethod
-	 * @param raceId
-	 * @param boatId
+	 * @param partnerId is the id of the partner.
+	 * @param price is the price to pay.
+	 * @param date is the date of payment.
+	 * @param paymentMethod is the method of payment used.
+	 * @param raceId is the id of the race.
+	 * @param boatId is the id of the boat.
 	 */
 	public SubscriptionFee(int partnerId, float price, Date date, PaymentMethod paymentMethod
 			, int raceId, int boatId) {
@@ -36,14 +42,13 @@ public class SubscriptionFee extends Payment{
 	}
 
 	/**
-	 * @param id
-	 * @param partnerId
-	 * @param price
-	 * @param date
-	 * @param paymentMethod
-	 * @param idS
-	 * @param raceId
-	 * @param boatId
+	 * @param id is the id of the subscription fee.
+	 * @param partnerId is the id of the partner.
+	 * @param price is the price to pay.
+	 * @param date is the date of payment.
+	 * @param paymentMethod is the method of payment used.
+	 * @param raceId is the id of the race.
+	 * @param boatId is the id of the boat.
 	 */
 	public SubscriptionFee(int id, int partnerId, float price, Date date, PaymentMethod paymentMethod
 			, int raceId, int boatId) {

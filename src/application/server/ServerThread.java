@@ -12,6 +12,8 @@ import application.communications.Response;
 import application.server.managers.ServerMessageManager;
 
 /**
+ * This class handles requests to the server on separate threads.
+ * 
  * @author Federico Canali
  *
  */
@@ -23,12 +25,19 @@ public class ServerThread implements Runnable{
 	private Socket socket;
 	private String id;
 	
+	/**
+	 * @param s is the server.
+	 * @param c is the socket.
+	 */
 	public ServerThread(final Server s, final Socket c) {
 		this.server = s;
 		this.socket = c;
 		this.id = String.valueOf(this.hashCode());
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public void run() {
 		ObjectInputStream is = null;

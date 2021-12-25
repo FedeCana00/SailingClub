@@ -1,6 +1,3 @@
-/**
- * 
- */
 package application.server.managers;
 
 import java.util.ArrayList;
@@ -10,6 +7,10 @@ import application.models.Race;
 import application.models.Registration;
 
 /**
+ * This class deals with the management of sailing club's races.
+ * 
+ * @see application.models.Race
+ * 
  * @author Federico Canali
  *
  */
@@ -82,7 +83,7 @@ public class RacesManager {
 	
 	/**
 	 * Register boat to race.
-	 * @param registration.
+	 * @param registration is the registration to add in database.
 	 **/
 	public void registerBoatToRace(Registration registration) {
 		SqlManager.getInstance().insertRegistrationInDB(registration);
@@ -91,7 +92,7 @@ public class RacesManager {
 	
 	/**
 	 * Used to remove race.
-	 * @param race. 
+	 * @param race is the race to remove from database. 
 	 **/
 	public void deleteRace(Race race) {
 		SqlManager.getInstance().deleteRaceInDB(race);

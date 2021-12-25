@@ -6,13 +6,21 @@ package application.models;
 import java.io.Serializable;
 
 /**
+ * This class represents the credentials of each user on the system.
+ * 
  * @author Federico
  *
  */
 
 public class Credentials implements Serializable{
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Represents the username of the person.
+	 */
 	private String username;
+	/**
+	 * Represents the password of the person.
+	 */
 	private String password;
 	
 	/**
@@ -21,8 +29,8 @@ public class Credentials implements Serializable{
 	public Credentials() {}
 	
 	/**
-	 * @param username
-	 * @param password
+	 * @param username is the username of the person.
+	 * @param password is the password of the person.
 	 */
 	public Credentials(String username, String password) {
 		super();

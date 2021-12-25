@@ -3,9 +3,9 @@ package application.client.controllers.partner;
 import java.io.File;
 
 import application.client.Client;
+import application.client.managers.AlertManager;
 import application.client.managers.UserManager;
 import application.client.managers.ViewManager;
-import application.managers.AlertManager;
 import application.models.Boat;
 import application.models.Partner;
 import javafx.beans.property.SimpleStringProperty;

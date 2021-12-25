@@ -1,6 +1,3 @@
-/**
- * 
- */
 package application.models;
 
 import java.io.Serializable;
@@ -9,16 +6,33 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author Federico
+ * This class represents a sailboat race, proposed by the sailing club.
+ * 
+ * @author Federico Canali
  *
  */
 
 public class Race implements Serializable{
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Represents the name of the race.
+	 */
 	private String name;
+	/**
+	 * Represents the id of the race.
+	 */
 	private int id;
+	/**
+	 * Represents the date of the race.
+	 */
 	private Date date;
+	/**
+	 * Represents the subscription price of the race.
+	 */
 	private float subscriptionPrice;
+	/**
+	 * Represents list of boats registered to race.
+	 */
 	private List<Boat> boats;
 	
 	/**
@@ -27,9 +41,9 @@ public class Race implements Serializable{
 	public Race() {}
 	
 	/**
-	 * @param name
-	 * @param date
-	 * @param subscriptionPrice
+	 * @param name is the name of the race.
+	 * @param date is the date of the race.
+	 * @param subscriptionPrice is the subscription price of the race.
 	 */
 	public Race(String name, Date date, float subscriptionPrice) {
 		super();
@@ -41,10 +55,10 @@ public class Race implements Serializable{
 	
 	
 	/**
-	 * @param id
-	 * @param name
-	 * @param date
-	 * @param subscriptionPrice
+	 * @param id is the id of the race.
+	 * @param name is the name of the race.
+	 * @param date is the date of the race.
+	 * @param subscriptionPrice is the subscription price of the race.
 	 */
 	public Race(int id ,String name, Date date, float subscriptionPrice) {
 		super();
@@ -123,6 +137,9 @@ public class Race implements Serializable{
 		this.subscriptionPrice = subscriptionPrice;
 	}
 
+	/**
+	 * {@inheritDoc} 
+	 */
 	@Override
 	public String toString() {
 		return "[ id = " + id + " , name = " + name +  

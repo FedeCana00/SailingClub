@@ -4,12 +4,32 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class represents the sailboat.
+ * 
+ * @author Federico Canali
+ */
 public class Boat implements Serializable{
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Represents the id of the boat.
+	 */
 	private int id;
+	/**
+	 * Represents the name of the boat.
+	 */
 	private String name;
+	/**
+	 * Represents the length of the boat.
+	 */
 	private float length;
+	/**
+	 * Represents the id of the owner.
+	 */
 	private int partnerId;
+	/**
+	 * Represents the list of the races to which the boat is registered.
+	 */
 	private List<Race> racesRegistered;
 	
 	/**
@@ -18,8 +38,10 @@ public class Boat implements Serializable{
 	public Boat() {}
 	
 	/**
-	 * @param id
-	 * @param name
+	 * @param id is the id of the boat.
+	 * @param name is the name of the boat.
+	 * @param length is the length of the boat.
+	 * @param partnerId is the id of owner.
 	 */
 	public Boat(int id, String name, float length, int partnerId) {
 		super();
@@ -31,9 +53,9 @@ public class Boat implements Serializable{
 	}
 	
 	/**
-	 * @param name
-	 * @param length
-	 * @param partnerId
+	 * @param name is the name of the boat.
+	 * @param length is the length of the boat.
+	 * @param partnerId is the id of owner.
 	 */
 	public Boat(String name, float length, int partnerId) {
 		super();
@@ -44,8 +66,8 @@ public class Boat implements Serializable{
 	}
 
 	/**
-	 * @param name
-	 * @param length
+	 * @param name is the name of the boat.
+	 * @param length is the length of the boat.
 	 */
 	public Boat(String name, float length) {
 		super();
@@ -121,6 +143,9 @@ public class Boat implements Serializable{
 		this.racesRegistered = racesRegistered;
 	}
 
+	/**
+	 * {@inheritDoc} 
+	 */
 	@Override
 	public String toString() {
 		return "[ id = " + id + ", name = " + name

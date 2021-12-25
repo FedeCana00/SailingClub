@@ -5,9 +5,9 @@ package application.client.controllers.clubStaff;
 
 import java.io.File;
 import application.client.Client;
+import application.client.managers.AlertManager;
 import application.client.managers.ClubStaffManager;
 import application.client.managers.ViewManager;
-import application.managers.AlertManager;
 import application.models.ToPay;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;

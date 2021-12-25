@@ -7,9 +7,9 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 import application.client.Client;
+import application.client.managers.AlertManager;
 import application.client.managers.ClientManager;
 import application.client.managers.ViewManager;
-import application.managers.AlertManager;
 import application.models.Race;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;

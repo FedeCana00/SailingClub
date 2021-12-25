@@ -1,13 +1,17 @@
 package application.client.controllers.partner;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
 
 import application.client.Client;
 import application.client.controllers.PaymentPageController;
+import application.client.managers.AlertManager;
 import application.client.managers.ClientManager;
 import application.client.managers.UserManager;
 import application.client.managers.ViewManager;
-import application.managers.AlertManager;
 import application.models.Boat;
 import application.models.Partner;
 import application.models.Race;
@@ -116,7 +120,14 @@ public class NewRegistrationController {
 	        tableViewRaces.getColumns().add(columnr2);
 	        tableViewRaces.getColumns().add(columnr3);
 	        
-	        tableViewRaces.setItems(FXCollections.observableList(ClientManager.getInstance().getAllRaces()));
+	        List<Race> races = new ArrayList<Race>();
+	        ClientManager.getInstance().getAllRaces().forEach(r -> {
+	        	Calendar calendar = Calendar.getInstance();
+	        	//add to list only if the date of the race is after today
+	        	if(r.getDate().after(new Date(calendar.getTimeInMillis())))
+	        		races.add(r);
+	        });
+	        tableViewRaces.setItems(FXCollections.observableList(races));
 	        
 	        addButtonsToTableViewBoats(tableViewBoats);
 	        addButtonsToTableViewRaces(tableViewRaces);

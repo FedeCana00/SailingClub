@@ -1,21 +1,35 @@
-/**
- * 
- */
 package application.models;
 
 import java.io.Serializable;
 import java.sql.Date;
 
 /**
+ * This class represents the payments that take place through the sailing club.
+ * 
  * @author Federico
  *
  */
 public class Payment implements Serializable{
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Represents the id of payment.
+	 */
 	private int id;
+	/**
+	 * Represents the id of the partner.
+	 */
 	private int partnerId;
+	/**
+	 * Represents the price to pay.
+	 */
 	private float price;
+	/**
+	 * Represents the date of payment.
+	 */
 	private Date date;
+	/**
+	 * Represents the method of payment used.
+	 */
 	private PaymentMethod paymentMethod;
 	
 	/**
@@ -24,11 +38,11 @@ public class Payment implements Serializable{
 	public Payment() {}
 	
 	/**
-	 * @param id
-	 * @param partnerId
-	 * @param price
-	 * @param date
-	 * @param paymentMethod
+	 * @param id is the id of payment.
+	 * @param partnerId is the id of the partner.
+	 * @param price is the price to pay.
+	 * @param date is the date of payment.
+	 * @param paymentMethod is the method of payment used.
 	 */
 	public Payment(int id, int partnerId, float price, Date date, PaymentMethod paymentMethod) {
 		super();
@@ -40,10 +54,10 @@ public class Payment implements Serializable{
 	}
 
 	/**
-	 * @param partnerId
-	 * @param price
-	 * @param date
-	 * @param paymentMethod
+	 * @param partnerId is the id of the partner.
+	 * @param price is the price to pay.
+	 * @param date is the date of payment.
+	 * @param paymentMethod is the method of payment used.
 	 */
 	public Payment(int partnerId, float price, Date date, PaymentMethod paymentMethod) {
 		super();
@@ -116,6 +130,9 @@ public class Payment implements Serializable{
 		this.date = date;
 	}
 	
+	/**
+	 * {@inheritDoc} 
+	 */
 	@Override
 	public String toString() {
 		return "[ id = " + id + ", price =  " + price 

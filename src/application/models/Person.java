@@ -3,16 +3,36 @@ package application.models;
 import java.io.Serializable;
 
 /**
+ * This class represents a natural person.
+ * 
  * @author Federico Canali
  *
  */
 public class Person implements Serializable{
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Represents the id of the person.
+	 */
 	private int id;
+	/**
+	 * Represents the name of the person.
+	 */
 	private String name;
+	/**
+	 * Represents the surname of the person.
+	 */
 	private String surname;
+	/**
+	 * Represents the address of the person.
+	 */
 	private String address;
+	/**
+	 * Represents the fiscal code of the person.
+	 */
 	private String fiscalCode;
+	/**
+	 * Represents the credentials of the person.
+	 */
 	private Credentials credentials;
 	
 	/**
@@ -21,12 +41,12 @@ public class Person implements Serializable{
 	public Person() {}
 
 	/**
-	 * @param id
-	 * @param name
-	 * @param surname
-	 * @param address
-	 * @param fiscalCode
-	 * @param credentials
+	 * @param id is the id of the person.
+	 * @param name is the name of the person.
+	 * @param surname is the surname of the person.
+	 * @param address is the address of the person.
+	 * @param fiscalCode is the fiscal code of the person.
+	 * @param credentials are the credentials of the person.
 	 */
 	public Person(int id, String name, String surname, String address, String fiscalCode, Credentials credentials) {
 		super();
@@ -39,11 +59,11 @@ public class Person implements Serializable{
 	}
 	
 	/**
-	 * @param name
-	 * @param surname
-	 * @param address
-	 * @param fiscalCode
-	 * @param credentials
+	 * @param name is the name of the person.
+	 * @param surname is the surname of the person.
+	 * @param address is the address of the person.
+	 * @param fiscalCode is the fiscal code of the person.
+	 * @param credentials are the credentials of the person.
 	 */
 	public Person(String name, String surname, String address, String fiscalCode, Credentials credentials) {
 		super();
@@ -138,7 +158,9 @@ public class Person implements Serializable{
 		this.fiscalCode = fiscalCode;
 	}
 	
-	
+	/**
+	 * {@inheritDoc} 
+	 */
 	@Override
 	public String toString() {
 		return "[ id = " + id + " , name = " + name

@@ -22,6 +22,8 @@ import application.models.Race;
 import application.models.Registration;
 
 /**
+ * This class is the main class of the server.
+ * 
  * @author Federico Canali
  *
  */
@@ -35,7 +37,8 @@ public class Server {
 	private ThreadPoolExecutor pool;
 	
 	/**
-	 * Public constructor. 
+	 * Public constructor.
+	 * @throws IOException Signals that an I/O exception of some sort has occurred. Thisclass is the general class of exceptions produced by failed orinterrupted I/O operations.
 	 **/
 	public Server() throws IOException{
 		this.socket = new ServerSocket(SERVER_PORT);
@@ -81,7 +84,8 @@ public class Server {
 	/**
 	 * Main function that run Server.
 	 * @param args.
-	 * @throws ParseException 
+	 * @throws ParseException Signals that an error has been reached unexpectedlywhile parsing.
+	 * @throws IOException Signals that an I/O exception of some sort has occurred. Thisclass is the general class of exceptions produced by failed orinterrupted I/O operations.
 	 **/
 	public static void main(final String[] args) throws IOException, ParseException{
 		

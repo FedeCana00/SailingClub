@@ -1,6 +1,3 @@
-/**
- * 
- */
 package application.server.managers;
 
 import java.util.ArrayList;
@@ -9,6 +6,10 @@ import java.util.List;
 import application.models.Boat;
 
 /**
+ * This class deals with the management of the partners' sailboats.
+ * 
+ * @see application.models.Boat
+ * 
  * @author Federico Canali
  *
  */

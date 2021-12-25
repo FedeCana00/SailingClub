@@ -11,7 +11,6 @@ import java.util.List;
 import application.communications.Message;
 import application.communications.Request;
 import application.communications.Response;
-import application.managers.AlertManager;
 import application.models.Boat;
 import application.models.ClubStaff;
 import application.models.Credentials;

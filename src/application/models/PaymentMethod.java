@@ -2,10 +2,24 @@ package application.models;
 
 import java.io.Serializable;
 
+/**
+ *	This class represents the payment method used to pay a sailing club fee.
+ *
+ * @author Federico Canali
+ */
 public class PaymentMethod implements Serializable{
 	private static final long serialVersionUID = 1L;
+	/**
+	 * Represents the id of the payment method.
+	 */
 	private int id;
+	/**
+	 * Represents the name of owner.
+	 */
 	private String ownerName;
+	/**
+	 * Represents the surname of owner.
+	 */
 	private String ownerSurname;
 	
 	/**
@@ -14,8 +28,8 @@ public class PaymentMethod implements Serializable{
 	public PaymentMethod() {}
 	
 	/**
-	 * @param ownerName
-	 * @param ownerSurname
+	 * @param ownerName is the name of owner.
+	 * @param ownerSurname is the surname of the owner.
 	 */
 	public PaymentMethod(String ownerName, String ownerSurname) {
 		super();
@@ -25,9 +39,9 @@ public class PaymentMethod implements Serializable{
 
 	
 	/**
-	 * @param id
-	 * @param ownerName
-	 * @param ownerSurname
+	 * @param id is the id of the payment method.
+	 * @param ownerName is the name of owner.
+	 * @param ownerSurname is the surname of the owner.
 	 */
 	public PaymentMethod(int id, String ownerName, String ownerSurname) {
 		super();

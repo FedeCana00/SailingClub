@@ -108,10 +108,10 @@ public class ClubStaffManager {
 	 * @param partner Represents the partner whose registration we want.
 	 * @return all the registrations.
 	 **/
-	public List<Registration> getRegistrationOfPartner(Partner partern){
+	public List<Registration> getRegistrationOfPartner(Partner partner){
 		List<Registration> registrations = new ArrayList<Registration>();
 		
-		partern.getBoats().forEach((boat) -> {
+		partner.getBoats().forEach((boat) -> {
 			boat.getRacesRegistered().forEach((race) -> {
 				registrations.add(new Registration(race, boat));
 			});

@@ -1,6 +1,8 @@
 package application.communications;
 
 /**
+ * Class representing the client's request for the server.
+ * 
  * @author Federico Canali
  *
  */

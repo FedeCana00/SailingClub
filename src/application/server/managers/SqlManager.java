@@ -32,6 +32,8 @@ import application.models.WireTransfer;
 
 /**
  * 
+ * This class deals with query management and database management.
+ * 
  * @author Federico Canali
  */
 public class SqlManager {
@@ -321,8 +323,8 @@ public class SqlManager {
    
    /**
     *  Used to get all boats and name of user inside of specific race.
-    *  @param raceId.
-    *  @return list of all suberscibers of race.
+    *  @param raceId is the race id.
+    *  @return list of all subscribers of race.
     */
    public List<Boat> getAllBoatsOfRace(int raceId){
 	   String selectString = "select * from boat as b, registration as rg where rg.raceId = " + raceId + " and rg.boatId = b.id ";
@@ -489,7 +491,7 @@ public class SqlManager {
    
    /** 
     * Used to insert new boats register to race in DB.
-    * @param registration.
+    * @param registration is the registration to insert in database.
     **/
    public void insertRegistrationInDB(Registration registration) {
 	   String insertSql = "insert into registration values (?, ?, ?)";
@@ -702,7 +704,7 @@ public class SqlManager {
    
    /**
     * Used to insert new payment.
-    * @param payment.
+    * @param payment is the payment to insert into database.
     **/
    public void insertPayment(Payment payment) {
 	   String insertSql = "insert into " + PaymentReason.getTableName(payment) 
@@ -796,7 +798,7 @@ public class SqlManager {
    
    /**
     * Used to insert notification.
-    * @param notification
+    * @param notification is the notification to insert inside database.
     **/
    public void insertNotification(Notification notification) {
 	   String insertSql = "insert into notification values (?, ?, ?, ?)";
@@ -826,7 +828,7 @@ public class SqlManager {
    
    /**
     * Used to insert toPay.
-    * @param toPay
+    * @param toPay is the to pay to insert into database.
     **/
    public void insertToPay(ToPay toPay) {
 	   String insertSql = "insert into toPay values (?, ?, ?, ?, ?)";

@@ -189,7 +189,7 @@ public class ViewManager {
      * Show the payment layout.
      * 
      * @param price It represents the price to pay for this operation.
-	 * @param objectToHandle Represents a possible object to manage once passed. It depends on the type of payment.
+	 * @param objectToInsert Represents a possible object to manage once passed. It depends on the type of payment.
 	 * @param operation Represents the type of payment that will have to be made.
      */
     public void showLayout(float price, Object objectToInsert, String operation) {

@@ -44,7 +44,7 @@ public class PaymentReason {
 	
 	/**
 	 * Used to return the right table in database name.
-	 * 
+	 * @param payment is the payment to perform.
 	 * @return Returns the name of the table in database.
 	 **/
 	public static String getTableName(Payment payment) {
@@ -63,7 +63,7 @@ public class PaymentReason {
 	/**
 	 * Used to return the value to insert into in database.
 	 * E.g. " values (?, ?, ?, ?, ?".
-	 * 
+	 * @param payment is the payment to perform.
 	 * @return Returns the value of the table in database. 
 	 **/
 	public static String getValue(Payment payment) {

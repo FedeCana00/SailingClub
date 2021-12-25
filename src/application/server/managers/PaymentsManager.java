@@ -16,6 +16,13 @@ import application.models.SubscriptionFee;
 import application.models.ToPay;
 
 /**
+ * This class deals with the management of the partners' payments.
+ * 
+ * @see application.models.Payment
+ * @see application.models.MembershipFee
+ * @see application.models.SubscriptionFee
+ * @see application.models.StorageFee
+ * 
  * @author Federico Canali
  *
  */
@@ -121,7 +128,8 @@ public class PaymentsManager {
 	}
 
 	/**
-	 * Insert new payment in database. 
+	 * Insert new payment in database.
+	 * @param payment Represents the payment to insert.
 	 **/
 	public void insertPayment(Payment payment) {
 		SqlManager.getInstance().insertPayment(payment);
@@ -272,6 +280,7 @@ public class PaymentsManager {
 	
 	/**
 	 * Get all toPay that a club staff can send to partner.
+	 * @return the list of to pay.
 	 */
 	public List<ToPay> getAllToPayNotYetSent(){
 		List<ToPay> result = new ArrayList<ToPay>();
@@ -286,7 +295,7 @@ public class PaymentsManager {
 	
 	/**
 	 * Get all toPay sent by the club staff to a partner.
-	 * @param partnerId.
+	 * @param partnerId represents the partner id.
 	 * @return list of to pay.
 	 */
 	public List<ToPay> getToPayOfPartner(int partnerId){
@@ -303,7 +312,7 @@ public class PaymentsManager {
 	
 	/**
 	 * Get all membership fees paid of partner.
-	 * @param partnerId.
+	 * @param partnerId represents the partner id..
 	 * @return list of to membership fees.
 	 */
 	public List<MembershipFee> getMembershipFeesOfPartner(int partnerId){
@@ -319,7 +328,7 @@ public class PaymentsManager {
 	
 	/**
 	 * Get all subscription fees paid of partner.
-	 * @param partnerId.
+	 * @param partnerId represents the partner id..
 	 * @return list of to subscription fees.
 	 */
 	public List<SubscriptionFee> getSubscriptionFees(int partnerId){
@@ -335,7 +344,7 @@ public class PaymentsManager {
 	
 	/**
 	 * Get all storage fees paid of partner.
-	 * @param partnerId.
+	 * @param partnerId represents the partner id..
 	 * @return list of to storage fees.
 	 */
 	public List<StorageFee> getStorageFees(int partnerId){
@@ -351,7 +360,8 @@ public class PaymentsManager {
 	
 	/**
 	 * Get all notifications of a partner.
-	 * @param partnerId.
+	 * @param partnerId represents the partner id.
+	 * @return list of notifications.
 	 */
 	public List<Notification> getNotifications(int partnerId){
 		List<Notification> result = new ArrayList<Notification>();
@@ -367,7 +377,7 @@ public class PaymentsManager {
 	
 	/**
 	 * Used to delete to pay in database.
-	 * @param toPay
+	 * @param toPay is the to pay to delete.
 	 */
 	public void deleteToPay(ToPay toPay) {
 		SqlManager.getInstance().deleteToPayInDB(toPay);

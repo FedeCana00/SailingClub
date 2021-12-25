@@ -9,6 +9,10 @@ import application.models.Partner;
 import application.models.Person;
 
 /**
+ * This class deals with the management of the people.
+ * 
+ * @see application.models.Person
+ * 
  * @author Federico Canali
  *
  */
@@ -88,7 +92,7 @@ public class PersonManager {
 	
 	/**
 	 *  Used to check if there is already someone with same username.
-	 *  @param username is the username we want to check.
+	 *  @param userName is the username we want to check.
 	 *  @return If the username already exists it returns true otherwise false.
 	 **/
 	public boolean hasSomeUserSameUserName(String userName) {
@@ -173,14 +177,14 @@ public class PersonManager {
 	}
 
 	/**
-	 * @return the loggedIn
+	 * @return the loggedIn.
 	 */
 	public Person getLoggedIn() {
 		return loggedIn;
 	}
 	
 	/**
-	 * Used to logout 
+	 * Used to logout.
 	 **/
 	public void logout() {
 		loggedIn = null;

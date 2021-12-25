@@ -8,7 +8,6 @@ application.client.views
 application.client.views.clubStaff
 application.client.views.partner
 application.communications
-application.managers
 application.models
 application.server
 application.server.managers
