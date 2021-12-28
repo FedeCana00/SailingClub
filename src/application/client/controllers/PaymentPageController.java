@@ -157,10 +157,22 @@ public class PaymentPageController {
 				 errorMessageString += "Owner name is empty!\n";
 			 }
 			 
+			 if(ownerName.getText().length() > 30) {
+				 areFilledCorrectly = false;
+				 changeBorderColor(ownerName);
+				 errorMessageString += "Owner name cannot be more than 30 characters!\n";
+			 }
+			 
 			 if(ownerSurname.getText().isEmpty()) {
 				 areFilledCorrectly = false;
 				 changeBorderColor(ownerSurname);
 				 errorMessageString += "Owner surname is empty!\n";
+			 }
+			 
+			 if(ownerSurname.getText().length() > 30) {
+				 areFilledCorrectly = false;
+				 changeBorderColor(ownerSurname);
+				 errorMessageString += "Owner surname cannot be more than 30 characters!\n";
 			 }
 			 
 			 if(paymentMethod.getValue().equals(TypeOfPaymentMethod.CREDIT_CARD)) {
@@ -209,6 +221,10 @@ public class PaymentPageController {
 					 areFilledCorrectly = false;
 					 changeBorderColor(expirationDate);
 					 errorMessageString += "Expiration date is empty!\n";
+				 } else if(expirationDate.getText().length() > 5) {
+					 areFilledCorrectly = false;
+					 changeBorderColor(expirationDate);
+					 errorMessageString += "Expiration date cannot be more than 5 characters!\n";
 				 } else {
 					 try {
 						 //used to check if is ok, so if a date and it's after today
@@ -236,6 +252,12 @@ public class PaymentPageController {
 					 areFilledCorrectly = false;
 					 changeBorderColor(referenceCode);
 					 errorMessageString += "Reference code is empty!\n";
+				 }
+				 
+				 if(referenceCode.getText().length() > 10) {
+					 areFilledCorrectly = false;
+					 changeBorderColor(referenceCode);
+					 errorMessageString += "Reference code cannot be more than 10 characters!\n";
 				 }
 				 
 				 if(emissionDate.getText().isEmpty()) {

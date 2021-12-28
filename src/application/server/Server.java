@@ -45,6 +45,8 @@ public class Server {
 	}
 	
 	private void run() {
+		System.out.println("Server is online!");
+		
 		this.pool = new ThreadPoolExecutor(COREPOOL, MAXPOOL, IDLETIME
 				, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<Runnable>());
 		
@@ -52,7 +54,7 @@ public class Server {
 			try {
 				Socket s = this.socket.accept();
 				
-				this.pool.execute(new ServerThread(this, s));
+				this.pool.execute(new ServerThread(s));
 			} catch(Exception e) {
 				break;
 			}
@@ -103,9 +105,9 @@ public class Server {
 			ClubStaff cs = new ClubStaff("Federico", "Canali", "Parma", "123456789", new Credentials("fede", "f"));
 	    	PersonManager.getInstance().addPerson(cs);
 	    	
-	    	Partner p = new Partner("Jhon", "Doe", "Parma", "123456789", new Credentials("j", "d"));
+	    	Partner p = new Partner("Jhon", "Doe", "Parma", "123456789", new Credentials("jo", "d"));
 	    	PersonManager.getInstance().addPerson(p);
-	    	Partner p2 = new Partner("Mario", "Rossi", "Roma", "123454789", new Credentials("m", "r"));
+	    	Partner p2 = new Partner("Mario", "Rossi", "Roma", "123454789", new Credentials("mario", "r"));
 	    	PersonManager.getInstance().addPerson(p2);
 	    	
 	    	Boat b1 = new Boat("Crociera", 24, 2);

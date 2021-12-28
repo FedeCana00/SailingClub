@@ -396,13 +396,8 @@ public class SqlManager {
 		   pstmt.setString(7, person.getCredentials().getUsername());
 		   pstmt.setString(8, person.getCredentials().getPassword());
 		   
-		   //TODO: not work here! Async process...
-		   //execute insert
-		   if(pstmt.execute()) {
-			   getPersonFromDB(); //read and memorize values in PersonManager
-			   System.out.println("User added to DB => " + person.toString());
-		   }
-		   
+		   pstmt.execute();
+		   System.out.println("User added to DB => " + person.toString()); 
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -425,13 +420,8 @@ public class SqlManager {
 		   pstmt.setFloat(3, boat.getLength());
 		   pstmt.setInt(4, boat.getPartnerId());
 		   
-		   //TODO: not work here! Async process...
-		   //execute insert
-		   if(pstmt.execute()) {
-			   getPersonFromDB();
-			   System.out.println("Boat added to DB => " + boat.toString());
-		   }
-		   
+		   pstmt.execute();
+		   System.out.println("Boat added to DB => " + boat.toString());   
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -447,14 +437,9 @@ public class SqlManager {
 	   try {
 		   
 		   PreparedStatement pstmt = conn.prepareStatement(deleteSql);
-		   
-		   //TODO: not work here! Async process...
-		   //execute insert
-		   if(pstmt.execute()) {
-			   getPersonFromDB();
-			   System.out.println("Boat deleted in DB => " + boat.toString());
-		   }
-		   
+		     
+		   pstmt.execute();	   
+		   System.out.println("Boat deleted in DB => " + boat.toString());  
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -477,13 +462,8 @@ public class SqlManager {
 		   pstmt.setDate(3, race.getDate());
 		   pstmt.setFloat(4, race.getSubscriptionPrice());
 		   
-		   //TODO: not work here! Async process...
-		   //execute insert
-		   if(pstmt.execute()) {
-			   getPersonFromDB();
-			   System.out.println("Race added to DB => " + race.toString());
-		   }
-		   
+		   pstmt.execute();
+		   System.out.println("Race added to DB => " + race.toString());
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -505,13 +485,8 @@ public class SqlManager {
 		   pstmt.setInt(2, registration.getBoat().getId());
 		   pstmt.setInt(3, registration.getRace().getId());
 		   
-		   //TODO: not work here! Async process...
-		   //execute insert
-		   if(pstmt.execute()) {
-			   getPersonFromDB();
-			   System.out.println("Registration added to DB => " + registration.toString());
-		   }
-		   
+		   pstmt.execute();
+		   System.out.println("Registration added to DB => " + registration.toString());		   
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -734,12 +709,8 @@ public class SqlManager {
 			   return;
 		   }
 		   
-		   //TODO: not work here! Async process...
-		   //execute insert
-		   if(pstmt.execute()) {
-			   getPersonFromDB();
-			   System.out.println("Payment added to DB => " + payment.toString());
-		   }
+		   pstmt.execute();
+		   System.out.println("Payment added to DB => " + payment.toString());
 		   
 		   //refresh payments
 		   getAllPayments();
@@ -812,15 +783,8 @@ public class SqlManager {
 		   pstmt.setInt(3, notification.getPartnerId());
 		   pstmt.setInt(4, notification.getToPayId());
 		   
-		   //TODO: not work here! Async process...
-		   //execute insert
-		   if(pstmt.execute()) {
-			   getPersonFromDB();
-			   System.out.println("Notification added to DB => " + notification.toString());
-		   }
-		   
-		   //refresh payments
-		   //TODO: refresh notification
+		   pstmt.execute();
+		   System.out.println("Notification added to DB => " + notification.toString());
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -843,15 +807,8 @@ public class SqlManager {
 		   pstmt.setInt(4, toPay.getPartnerId());
 		   pstmt.setInt(5, toPay.getBoatId());
 		   
-		   //TODO: not work here! Async process...
-		   //execute insert
-		   if(pstmt.execute()) {
-			   getPersonFromDB();
-			   System.out.println("ToPay added to DB => " + toPay.toString());
-		   }
-		   
-		   //refresh payments
-		   //TODO: refresh notification
+		   pstmt.execute();
+		   System.out.println("ToPay added to DB => " + toPay.toString());
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -868,13 +825,8 @@ public class SqlManager {
 		   
 		   PreparedStatement pstmt = conn.prepareStatement(deleteSql);
 		   
-		   //TODO: not work here! Async process...
-		   //execute insert
-		   if(pstmt.execute()) {
-			   getPersonFromDB();
-			   System.out.println("ToPay deleted in DB => " + toPay.toString());
-		   }
-		   
+		   pstmt.execute();
+		   System.out.println("ToPay deleted in DB => " + toPay.toString());
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -891,13 +843,8 @@ public class SqlManager {
 		   
 		   PreparedStatement pstmt = conn.prepareStatement(deleteSql);
 		   
-		   //TODO: not work here! Async process...
-		   //execute insert
-		   if(pstmt.execute()) {
-			   getPersonFromDB();
-			   System.out.println("Race deleted in DB => " + race.toString());
-		   }
-		   
+		   pstmt.execute();
+		   System.out.println("Race deleted in DB => " + race.toString());   
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

@@ -80,6 +80,12 @@ public class AddRacePageController {
 				 errorMessageString += "Name is empty!\n";
 			 }
 			 
+			 if(name.getText().length() > 30) {
+				 areFilledCorrectly = false;
+				 changeBorderColor(name);
+				 errorMessageString += "Name cannot be more than 30 characters!\n";
+			 }
+			 
 			 if(price.getText().isEmpty()) {
 				 areFilledCorrectly = false;
 				 changeBorderColor(price);

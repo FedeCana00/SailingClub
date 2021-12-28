@@ -18,19 +18,15 @@ import application.server.managers.ServerMessageManager;
  *
  */
 public class ServerThread implements Runnable{
-	private static final int MAX = 10;
 	private static final long SLEEPTIME = 200;
 	
-	private Server server;
 	private Socket socket;
 	private String id;
 	
 	/**
-	 * @param s is the server.
 	 * @param c is the socket.
 	 */
-	public ServerThread(final Server s, final Socket c) {
-		this.server = s;
+	public ServerThread(final Socket c) {
 		this.socket = c;
 		this.id = String.valueOf(this.hashCode());
 	}

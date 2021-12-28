@@ -83,16 +83,34 @@ public class SignUpPageController {
 				 errorMessageString += "Name is empty!\n";
 			 }
 			 
+			 if(name.getText().length() > 30) {
+				 areFilledCorrectly = false;
+				 changeBorderColor(name);
+				 errorMessageString += "Name cannot be more than 30 characters!\n";
+			 }
+			 
 			 if(surname.getText().isEmpty()) {
 				 areFilledCorrectly = false;
 				 changeBorderColor(surname);
 				 errorMessageString += "Surname is empty!\n";
 			 }
 			 
+			 if(surname.getText().length() > 30) {
+				 areFilledCorrectly = false;
+				 changeBorderColor(name);
+				 errorMessageString += "Surname cannot be more than 30 characters!\n";
+			 }
+			 
 			 if(address.getText().isEmpty()) {
 				 areFilledCorrectly = false;
 				 changeBorderColor(address);
 				 errorMessageString += "Address is empty!\n";
+			 }
+			 
+			 if(address.getText().length() > 50) {
+				 areFilledCorrectly = false;
+				 changeBorderColor(name);
+				 errorMessageString += "Address cannot be more than 50 characters!\n";
 			 }
 			 
 			 if(fiscalCode.getText().length() != 16) {
@@ -107,6 +125,12 @@ public class SignUpPageController {
 				 errorMessageString += "Username is empty!\n";
 			 }
 			 
+			 if(username.getText().length() > 30) {
+				 areFilledCorrectly = false;
+				 changeBorderColor(name);
+				 errorMessageString += "Username cannot be more than 30 characters!\n";
+			 }
+			 
 			 //check if this username already exixsts
 			 if(ClientManager.getInstance().hasSomeUserSameUserName(new Credentials(username.getText(), null))) {
 				 areFilledCorrectly = false;
@@ -118,6 +142,12 @@ public class SignUpPageController {
 				 areFilledCorrectly = false;
 				 changeBorderColor(password);
 				 errorMessageString += "Password is less than 5 characters!\n";
+			 }
+			 
+			 if(password.getText().length() > 30) {
+				 areFilledCorrectly = false;
+				 changeBorderColor(name);
+				 errorMessageString += "Password cannot be more than 30 characters!\n";
 			 }
 			 
 			 if(areFilledCorrectly) {

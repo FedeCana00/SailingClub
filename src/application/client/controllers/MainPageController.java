@@ -71,6 +71,7 @@ public class MainPageController {
 					 } else if (UserManager.getInstance().getPerson() instanceof ClubStaff) {
 						 ViewManager.getInstance().showLayout(ViewManager.CLUB_STAFF_MAIN_PAGE);
 					 } else {
+						 AlertManager.getInstance().showErrorMessage("Type of user not identified!");
 						 System.out.println("Type of user not identified!");
 					 }
 					 return;
