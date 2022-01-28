@@ -12,6 +12,10 @@ import application.models.Boat;
 import application.models.Race;
 
 /**
+ * This class tests the class Boat.
+ * 
+ * @see application.models.Boat
+ * 
  * @author Federico Canali
  *
  */

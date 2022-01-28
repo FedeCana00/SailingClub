@@ -1,6 +1,3 @@
-/**
- * 
- */
 package test.models;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -13,6 +10,10 @@ import application.models.PaymentMethod;
 import application.models.SubscriptionFee;
 
 /**
+ * This class tests the class SubscriptionFee.
+ * 
+ * @see application.models.SubscriptionFee
+ * 
  * @author Federico Canali
  *
  */

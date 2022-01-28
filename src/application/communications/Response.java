@@ -8,6 +8,11 @@ package application.communications;
  */
 public class Response extends Message{
 	private static final long serialVersionUID = 1L;
+	
+	/**
+	 * Default constructor. 
+	 */
+	public Response() {}
 
 	/**
 	 * {@inheritDoc} 

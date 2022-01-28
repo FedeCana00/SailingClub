@@ -33,8 +33,6 @@ public class ClientManager {
 	private static final int SERVER_PORT = 8080;
 	private static final String SERVER_HOST = "localhost";
 	
-	private static final int MAX = 10;
-	
 	/* 
 	 * The instance is static so it is shared among all instances of the class. It is also private
     * so it is accessible only within the class.

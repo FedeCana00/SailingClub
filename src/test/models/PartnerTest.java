@@ -1,6 +1,3 @@
-/**
- * 
- */
 package test.models;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -16,6 +13,10 @@ import application.models.Credentials;
 import application.models.Partner;
 
 /**
+ * This class tests the class Partner.
+ * 
+ * @see application.models.Partner
+ * 
  * @author Federico Canali
  *
  */

@@ -12,6 +12,14 @@ import org.junit.jupiter.api.Test;
 import application.models.Boat;
 import application.models.Race;
 
+/**
+ * This class tests the class Race.
+ * 
+ * @see application.models.Race
+ * 
+ * @author Federico Canali
+ *
+ */
 class RaceTest {
 	
 	private static final String NAME = "Race";

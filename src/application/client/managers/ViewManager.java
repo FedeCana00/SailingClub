@@ -3,6 +3,8 @@
  */
 package application.client.managers;
 
+import java.io.File;
+
 import application.client.controllers.MainPageController;
 import application.client.controllers.PaymentPageController;
 import application.client.controllers.SignUpPageController;
@@ -24,6 +26,7 @@ import application.client.controllers.partner.RacesPartnerPageController;
 import application.models.Partner;
 import application.models.Race;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 /**
@@ -243,8 +246,13 @@ public class ViewManager {
     public void initAndStart(Stage primaryStage) {
     	this.stage = primaryStage;
         this.stage.setTitle("Sailing Club");
-        this.stage.setMinHeight(540);
-        this.stage.setMinWidth(515);
+        this.stage.setMinHeight(500);
+        this.stage.setMinWidth(600);
+        
+        //set icon
+        File file = new File("img/anchor.png");
+        Image image = new Image(file.toURI().toString());
+        this.stage.getIcons().add(image);
 
         showLayout(MAIN_PAGE);
     }

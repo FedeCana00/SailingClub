@@ -1,6 +1,3 @@
-/**
- * 
- */
 package test.models;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -10,6 +7,10 @@ import org.junit.jupiter.api.Test;
 import application.models.ToPay;
 
 /**
+ * This class tests the class ToPay.
+ * 
+ * @see application.models.ToPay
+ * 
  * @author Federico Canali
  *
  */

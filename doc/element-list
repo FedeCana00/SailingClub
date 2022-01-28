@@ -12,4 +12,10 @@ application.models
 application.server
 application.server.managers
 test
+test.classes
+test.client
+test.client.managers
+test.communications
 test.models
+test.server
+test.server.managers

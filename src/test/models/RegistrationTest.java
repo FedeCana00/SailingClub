@@ -1,6 +1,3 @@
-/**
- * 
- */
 package test.models;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -12,6 +9,10 @@ import application.models.Race;
 import application.models.Registration;
 
 /**
+ * This class tests the class Registration.
+ * 
+ * @see application.models.Registration
+ * 
  * @author Federico Canali
  *
  */

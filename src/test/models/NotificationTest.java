@@ -1,6 +1,3 @@
-/**
- * 
- */
 package test.models;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -10,6 +7,10 @@ import org.junit.jupiter.api.Test;
 import application.models.Notification;
 
 /**
+ * This class tests the class Notification.
+ * 
+ * @see application.models.Notification
+ * 
  * @author Federico Canali
  *
  */

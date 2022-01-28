@@ -32,15 +32,15 @@ public class PaymentReason {
 	/**
 	 * Represents String of subscription fee of the table name in the database.
 	 **/
-	private static final String TABLE_SUBSCRIPTION_FEE = "subscriptionFee";
+	public static final String TABLE_SUBSCRIPTION_FEE = "subscriptionFee";
 	/**
 	 * Represents String of storage fee of the table name in the database.
 	 **/
-	private static final String TABLE_STORAGE_FEE = "storageFee";
+	public static final String TABLE_STORAGE_FEE = "storageFee";
 	/**
 	 * Represents String of membership fee of the table name in the database.
 	 **/
-	private static final String TABLE_MEMBERSHIP_FEE = "membershipFee";
+	public static final String TABLE_MEMBERSHIP_FEE = "membershipFee";
 	
 	/**
 	 * Used to return the right table in database name.

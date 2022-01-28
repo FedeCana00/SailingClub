@@ -1,6 +1,3 @@
-/**
- * 
- */
 package test.models;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -12,6 +9,10 @@ import org.junit.jupiter.api.Test;
 import application.models.WireTransfer;
 
 /**
+ * This class tests the class WireTransfer.
+ * 
+ * @see application.models.WireTransfer
+ * 
  * @author Federico Canali
  *
  */

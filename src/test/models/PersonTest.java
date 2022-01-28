@@ -8,6 +8,14 @@ import application.models.Credentials;
 import application.models.Partner;
 import application.models.Person;
 
+/**
+ * This class tests the class Person.
+ * 
+ * @see application.models.Person
+ * 
+ * @author Federico Canali
+ *
+ */
 class PersonTest {
 	
 	private static final int ID = 12;

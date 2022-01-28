@@ -7,7 +7,16 @@ import org.junit.jupiter.api.Test;
 import application.models.ClubStaff;
 import application.models.Credentials;
 
+/**
+ * This class tests the class ClubStaff.
+ * 
+ * @see application.models.ClubStaff
+ * 
+ * @author Federico Canali
+ *
+ */
 class ClubStaffTest {
+	
 	private static final int ID = 12;
 	private static final String NAME = "Federico";
 	private static final String SURNAME = "Canali";

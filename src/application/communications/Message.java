@@ -113,6 +113,11 @@ public class Message implements Serializable{
 	private Object value;
 	
 	/**
+	 * Default constructor. 
+	 */
+	public Message() {}
+	
+	/**
 	 * @param action is the action to be performed.
 	 * @param value is the value to used in the action.
 	 */
