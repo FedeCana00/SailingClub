@@ -51,44 +51,44 @@ The external libraries needed are JUnit 5 (https://junit.org/junit5/) and MySQL 
 
 ## Screenshots
 
-<p float="left">
-  <img src="screenshots/login.png" width="500"/>
-  <img src="screenshots/signUp.png" width="500"/>
+<p align="center">
+  <img src="screenshots/login.png" width="400"/>
+  <img src="screenshots/signUp.png" width="400"/>
 </p>
 
-<p float="left">
-  <img src="screenshots/partnerMain.png" width="500"/>
-  <img src="screenshots/partnerBoats.png" width="500"/>
+<p align="center">
+  <img src="screenshots/partnerMain.png" width="400"/>
+  <img src="screenshots/partnerBoats.png" width="400"/>
 </p>
 
-<p float="left">
-  <img src="screenshots/partnerRaces.png" width="500"/>
-  <img src="screenshots/partnerPayments.png" width="500"/>
+<p align="center">
+  <img src="screenshots/partnerRaces.png" width="400"/>
+  <img src="screenshots/partnerPayments.png" width="400"/>
 </p>
 
-<p float="left">
-  <img src="screenshots/addBoat.png" width="500"/>
-  <img src="screenshots/addRegistration.png" width="500"/>
+<p align="center">
+  <img src="screenshots/addBoat.png" width="400"/>
+  <img src="screenshots/addRegistration.png" width="400"/>
 </p>
 
-<p float="left">
-  <img src="screenshots/paymentPageCreditCard.png" width="500"/>
-  <img src="screenshots/paymentPageWireTransfer.png" width="500"/>
+<p align="center">
+  <img src="screenshots/paymentPageCreditCard.png" width="400"/>
+  <img src="screenshots/paymentPageWireTransfer.png" width="400"/>
 </p>
 
-<p float="left">
-  <img src="screenshots/cubStaffMain.png" width="500"/>
-  <img src="screenshots/sendPayments.png" width="500"/>
+<p align="center">
+  <img src="screenshots/cubStaffMain.png" width="400"/>
+  <img src="screenshots/sendPayments.png" width="400"/>
 </p>
 
-<p float="left">
-  <img src="screenshots/raceSubscribers.png" width="500"/>
-  <img src="screenshots/partnerInfo.png" width="500"/>
+<p align="center">
+  <img src="screenshots/raceSubscribers.png" width="400"/>
+  <img src="screenshots/partnerInfo.png" width="400"/>
 </p>
 
-<p float="left">
-  <img src="screenshots/addRace.png" width="500"/>
-  <img src="screenshots/notifications.png" width="500"/>
+<p align="center">
+  <img src="screenshots/addRace.png" width="400"/>
+  <img src="screenshots/notifications.png" width="400"/>
 </p>
 
 <!-- LICENSE -->
