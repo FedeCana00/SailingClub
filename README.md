@@ -15,9 +15,9 @@
     <br />
     <a href="#Installation">Installation</a>
     ·
-    <a href="Use">Use</a>
+    <a href="#Use">Use</a>
     ·
-    <a href="Screenshots">Screenshots</a>
+    <a href="#Screenshots">Screenshots</a>
   </p>
 </div>
 
